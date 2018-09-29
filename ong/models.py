@@ -21,7 +21,15 @@ class Departamento(models.Model):
 
 @python_2_unicode_compatible
 class Sexo(models.Model):
-	nombre = models.CharField(max_length=50)
+	SEXO_CHOICES = (
+		('M', 'Masculino'),
+		('F', 'Femenino')
+	)
+
+	nombre = models.CharField(
+		max_length=50, 
+		choices=SEXO_CHOICES
+	)
 
 	def __str__(self):
 		return self.nombre
