@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^application/', include('ong.urls2')),
     url(r'^application/', include('ong.urls3')),
     url(r'^application/', include('ong.urls4')),
+    url(r'^application/', include('ong.urls5')),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
