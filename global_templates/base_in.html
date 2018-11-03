@@ -1,1 +1,210 @@
 {% extends "base.html" %}
+{% block contenido %}
+	<style>
+	.navbar-global {
+	background-color: indigo;
+	}
+	.navbar-global .navbar-brand {
+	color: white;
+	}
+	.navbar-global .navbar-user > li > a
+	{
+	color: white;
+	}
+	.navbar-primary {
+	background-color: #333;
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	top: 51px;
+	width: 200px;
+	z-index: 8;
+	overflow: hidden;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	}
+	.navbar-primary.collapsed {
+	width: 60px;
+	}
+	.navbar-primary.collapsed .glyphicon {
+	font-size: 22px;
+	}
+	.navbar-primary.collapsed .nav-label {
+	display: none;
+	}
+	.btn-expand-collapse {
+	position: absolute;
+	display: block;
+	left: 0px;
+	bottom:0;
+	width: 100%;
+	padding: 8px 0;
+	border-top:solid 1px #666;
+	color: grey;
+	font-size: 20px;
+	text-align: center;
+	}
+	.btn-expand-collapse:hover,
+	.btn-expand-collapse:focus {
+	background-color: #222;
+	color: white;
+	}
+	.btn-expand-collapse:active {
+	background-color: #111;
+	}
+	.navbar-primary-menu,
+	.navbar-primary-menu li {
+	margin:0; padding:0;
+	list-style: none;
+	}
+	.navbar-primary-menu li a {
+	display: block;
+	padding: 10px 18px;
+	text-align: left;
+	border-bottom:solid 1px #444;
+	color: #ccc;
+	}
+	.navbar-primary-menu li a:hover {
+	background-color: #000;
+	text-decoration: none;
+	color: white;
+	}
+	.navbar-primary-menu li a .glyphicon {
+	margin-right: 6px;
+	}
+	.navbar-primary-menu li a:hover .glyphicon {
+	color: orchid;
+	}
+	.main-content {
+	margin-top: 60px;
+	margin-left: 200px;
+	padding: 20px;
+	}
+	.collapsed + .main-content {
+	margin-left: 60px;
+	}
+	#x{
+		background: #347AB6;
+	}
+	#navVertical{
+		position: fixed;
+		overflow: auto;
+		max-height: 100%;
+		/*background-color: #347AB6;*/
+	}
+	.navbar-primary-menu .glyphicon{
+		color: white;
+	}
+	.menusGR{
+		font-size: 17px;
+		color: white;
+	}
+	.menusGR .glyphicon {
+		font-size: 17px;
+	}
+	.navbar-primary-menu .nav-label{
+		color: white;
+	}
+	.tablas_registros {
+		padding: 3px;
+	}
+		
+	@media (max-width: 767px) {
+		a {
+			color: red;
+		}
+		a:hover,
+		a:focus {
+			color: red;
+		}
+		html{
+			
+			overflow: hidden;
+		
+		}
+		body{
+			height:100%;
+			position:fixed; /* prevent overscroll bounce*/
+			
+			overflow-y:scroll;
+			-webkit-overflow-scrolling: touch; /* iOS velocity scrolling */
+			width:100%;
+		
+		}
+	}
+	</style>
+	<nav id="x" class="navbar navbar-inverse navbar-global navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{% url 'app:home' %}">SOLIDARIDAD HONDURAS</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse menusGR">
+				<ul class="nav navbar-nav navbar-user navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" alt=""></span> Reportes<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+						Reporte 1 </a></li></li>
+						<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+					Reporte 2 </a></li></li>
+					<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+				Reporte 3 </a></li></li>
+				<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+			Reporte 4 </a></li></li>
+			<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+		Reporte 5 </a></li></li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-signal" alt=""></span> Gráficos<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+	Gráfico 1 </a></li></li>
+	<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+Gráfico 2 </a></li></li>
+<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+Gráfico 3 </a></li></li>
+<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+Gráfico 4 </a></li></li>
+<li><a href="#"><span class="glyphicon glyphicon-signal"></span>
+Gráfico 5 </a></li></li>
+</ul>
+</li>
+<li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.get_full_name}}</a></li>
+<li><a href="{%	url 'security:log_out' %}"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+<nav id="navVertical" class="navbar-primary">
+<a href="#" class="btn-expand-collapse"><span id="imgF" class="glyphicon glyphicon-menu-left"></span></a>
+<ul class="navbar-primary-menu">
+<li>
+<a href="{% url 'app:voluntarios' %}"><span class="glyphicon glyphicon-user"></span><span class="nav-label">Voluntarios</span></a>
+<a href="#"><span class="glyphicon glyphicon-th-list"></span><span class="nav-label">Tipo de voluntarios</span></a>
+<a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Eventos</span></a>
+<a href="#"><span class="glyphicon glyphicon-flag"></span><span class="nav-label">Departamentos</span></a>
+<a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Consultas</span></a>
+<a href="#"><span class="glyphicon glyphicon-eye-open"></span><span class="nav-label">Opiniones</span></a>
+<a href="#"><span class="glyphicon glyphicon-question-sign"></span><span class="nav-label">Preguntas frecuentes</span></a>
+<a href="#"><span class="glyphicon glyphicon-folder-open"></span><span class="nav-label">Banco de información</span></a>
+<a href="#"><span class="glyphicon glyphicon-tasks"></span><span class="nav-label">Estructura organizativa</span></a>
+<!-- <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Reportes</span></a>
+<a href="#"><span class="glyphicon glyphicon-signal"></span><span class="nav-label">Gráficos</span></a> -->
+</li>
+</ul>
+</nav>
+<div class="main-content">
+<!-- <h1> I am the main content </h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p> -->
+{% block contenidoApp %}
+{% endblock contenidoApp %}
+</div>
+{% endblock contenido %}

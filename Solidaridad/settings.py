@@ -25,7 +25,7 @@ SECRET_KEY = 'gt&06(rb019+0-*)nny6v87!#o0n_m1^d*gdfup^)#62*r6ibi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,9 +86,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'Solidaridad',
-        'USER': 'soluser',
-        'PASSWORD': '123abcd.',
-        'HOST': '40.122.64.50'
+        'USER': 'sa',
+        'PASSWORD': '123',
+        'HOST': 'localhost'
     }
 }
 
@@ -135,7 +135,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGIN_URL = '/'
+LOGIN_URL = '/security/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'global_static'),

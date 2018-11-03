@@ -3,12 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{% block titulo %}{% endblock %}</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-select.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/jasny-bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/datatable.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/buttons_datatable.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 	<div class="container">
 		{% block contenido %}
 			
 		{% endblock contenido %}
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+		<script src="{% static 'bootstrap/js/bootstrap-select.js' %}"></script>
+		<script src="{% static 'bootstrap/js/jasny-bootstrap.js' %}"></script>
+		<script src="{% static 'js/grafico1.js' %}"></script>
+		<script src="{% static 'js/grafico2.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable1.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable2.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable3.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable4.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable5.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable6.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable7.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable8.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable9.js' %}"></script>
+		<script src="{% static 'bootstrap/js/datatable10.js' %}"></script>
+		<script>
+			var detector = !false;
+			//validate();
+			
+			$('.btn-expand-collapse').click(function(e) {
+				detector = !detector;
+				validate();
+				
+				$('.navbar-primary').toggleClass('collapsed');
+			});
+			$(".btn-expand-collapse").trigger('click') 
+
+			function validate(){
+				if(!detector){
+						$('#imgF').prop('class', 'glyphicon glyphicon-menu-right')
+				}else{
+						$('#imgF').prop('class', 'glyphicon glyphicon-menu-left')
+				}
+			}
+		</script>
+		{% block script %}{% endblock  %}
 	</div>
 </body>
 </html>
