@@ -15,14 +15,15 @@
 	background-color: #333;
 	bottom: 0px;
 	left: 0px;
-	position: absolute;
 	top: 51px;
+	position: absolute;
+	
 	width: 200px;
 	z-index: 8;
 	overflow: hidden;
 	-webkit-transition: all 0.1s ease-in-out;
 	-moz-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out; 
 	}
 	.navbar-primary.collapsed {
 	width: 60px;
@@ -187,15 +188,15 @@ Gráfico 5 </a></li></li>
 <a href="#" class="btn-expand-collapse"><span id="imgF" class="glyphicon glyphicon-menu-left"></span></a>
 <ul class="navbar-primary-menu">
 <li>
-<a href="{% url 'app:voluntarios' %}"><span class="glyphicon glyphicon-user"></span><span class="nav-label">Voluntarios</span></a>
-<a href="#"><span class="glyphicon glyphicon-th-list"></span><span class="nav-label">Tipo de voluntarios</span></a>
-<a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Eventos</span></a>
-<a href="#"><span class="glyphicon glyphicon-flag"></span><span class="nav-label">Departamentos</span></a>
-<a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Consultas</span></a>
-<a href="#"><span class="glyphicon glyphicon-eye-open"></span><span class="nav-label">Opiniones</span></a>
-<a href="#"><span class="glyphicon glyphicon-question-sign"></span><span class="nav-label">Preguntas frecuentes</span></a>
-<a href="#"><span class="glyphicon glyphicon-folder-open"></span><span class="nav-label">Banco de información</span></a>
-<a href="#"><span class="glyphicon glyphicon-tasks"></span><span class="nav-label">Estructura organizativa</span></a>
+<a title="Voluntarios" href="{% url 'app:voluntarios' %}"><span  class="glyphicon glyphicon-user"></span><span class="nav-label" >Voluntarios</span></a>
+<a  title="Tipo de Voluntarios" href="{% url 'app:tiposVoluntarios' %}"><span class="glyphicon glyphicon-th-list"></span><span  class="nav-label">Tipo de voluntarios</span></a>
+<a  title="Eventos" href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Eventos</span></a>
+<a  title="Departamentos" href="{% url 'app:departamentos' %}"><span class="glyphicon glyphicon-flag"></span><span class="nav-label">Departamentos</span></a>
+<a  title="Consultas" href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Consultas</span></a>
+<a  title="Opiniones" href="#"><span class="glyphicon glyphicon-eye-open"></span><span class="nav-label">Opiniones</span></a>
+<a  title="Preguntas frecuentes" href="{% url 'app:preguntas' %}"><span class="glyphicon glyphicon-question-sign"></span><span class="nav-label">Preguntas frecuentes</span></a>
+<a  title="Banco de información" href="{% url 'app:bancosInformacion' %}"><span class="glyphicon glyphicon-folder-open"></span><span class="nav-label">Banco de información</span></a>
+<a  title="Estructura organizativa" href="{% url 'app:estructuraOrganizativa' %}"><span class="glyphicon glyphicon-tasks"></span><span class="nav-label">Estructura organizativa</span></a>
 <!-- <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Reportes</span></a>
 <a href="#"><span class="glyphicon glyphicon-signal"></span><span class="nav-label">Gráficos</span></a> -->
 </li>

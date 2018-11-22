@@ -1,0 +1,40 @@
+{% extends "base_in.html" %}
+{% block titulo %}
+	Estructura Organizativa
+{% endblock titulo %}
+{% block contenidoApp %}
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Gestión de Estructura Organizativa</h3>
+			</div>
+			<div class="panel-body">
+				<form style="" action="{% url 'app:guardarEstructuraOrganizativa' %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="col-md-12">
+						<label>Misión</label>
+						{{form.mision}}
+					</div>
+					<div class="col-md-12">
+						<label>Visión</label>
+						{{form.vision}}
+					</div>
+					<div class="col-md-12">
+						<label>Politicas</label>
+						{{form.politicas}}
+					</div>
+					<div class="col-md-12" style="text-align: right; margin-top: 10px">
+						<button type="submit" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Guardar</button>
+					</div>
+				</form>
+			</div>
+			{% if form.errors %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{form.errors|title }}</strong></div>
+			{% endif %}
+			{% if error %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{error|title }}</strong></div>
+			{% endif %}
+			
+		</div>
+</div>
+{% endblock contenidoApp %}

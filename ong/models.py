@@ -14,7 +14,7 @@ class Tipo_Voluntario(models.Model):
 
 @python_2_unicode_compatible
 class Departamento(models.Model):
-	depto = models.CharField(max_length=200)
+	depto = models.CharField(max_length=200, unique = True)
 
 	def __str__(self):
 		return self.depto
@@ -43,7 +43,7 @@ class Voluntario(models.Model):
 	telefono = models.CharField(max_length=9)
 	correo = models.EmailField(max_length=100, blank=True)
 	sexo = models.ForeignKey(Sexo, on_delete = models.CASCADE)
-	usuario = models.ForeignKey(User)
+	usuario = models.OneToOneField(User)
 	depto = models.ForeignKey(Departamento)
 	tipo = models.ForeignKey(Tipo_Voluntario)
 	foto = models.ImageField(upload_to="fotos_voluntarios", blank=True)
@@ -65,7 +65,11 @@ class Evento(models.Model):
 		return '{} el dia {} en los departamentos {}' .format(self.nombre, self.fechaHora, ",".join([d.depto for d in self.depto.all()]))
 
 class Banco_Informacion(models.Model):
+	descripcion = models.CharField(max_length=100, null=True)
 	archivo = models.FileField(upload_to="archivos")
+
+	def __str__(self):
+		return self.descripcion
 
 	class Meta:
 		verbose_name_plural = "Banco de información"

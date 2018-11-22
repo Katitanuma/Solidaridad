@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>{% block titulo %}{% endblock %}</title>
@@ -17,6 +17,7 @@
 			
 		{% endblock contenido %}
 		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/notify.js' %}"></script>
 		<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
 		<script src="{% static 'bootstrap/js/bootstrap-select.js' %}"></script>
 		<script src="{% static 'bootstrap/js/jasny-bootstrap.js' %}"></script>
@@ -32,6 +33,8 @@
 		<script src="{% static 'bootstrap/js/datatable8.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable9.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable10.js' %}"></script>
+		{% load compress %}
+		{% compress js %}
 		<script>
 			var detector = !false;
 			//validate();
@@ -42,7 +45,8 @@
 				
 				$('.navbar-primary').toggleClass('collapsed');
 			});
-			$(".btn-expand-collapse").trigger('click') 
+			//$(".btn-expand-collapse").trigger('click') 
+			$('.navbar-primary').toggleClass('collapsed');
 
 			function validate(){
 				if(!detector){
@@ -52,7 +56,11 @@
 				}
 			}
 		</script>
+		{% endcompress %}	
+		{% compress js %}
 		{% block script %}{% endblock  %}
+		{% endcompress %}
+		
 	</div>
 </body>
 </html>
