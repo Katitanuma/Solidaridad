@@ -25,7 +25,7 @@ def home(request):
 	listado2 = []
 	for depto in Departamento.objects.all():
 		if Voluntario.objects.filter(depto = depto).count() > 0:
-			listado1.append(str(depto))
+			listado1.append(str(str(depto) + " ({})".format(Voluntario.objects.filter(depto = depto).count())))
 			listado2.append((float(Voluntario.objects.filter(depto = depto).count()) / float(Voluntario.objects.all().count()) ) * 360 
 			)
 
@@ -33,7 +33,7 @@ def home(request):
 	listado4 = []
 	for tipo in Tipo_Voluntario.objects.all():
 		if Voluntario.objects.filter(tipo = tipo).count() > 0:
-			listado3.append(str(tipo))
+			listado3.append(str(str(tipo) + " ({})".format(Voluntario.objects.filter(tipo = tipo).count())))
 			listado4.append((float(Voluntario.objects.filter(tipo = tipo).count()) / float(Voluntario.objects.all().count()) ) * 360 
 			)
 
@@ -425,7 +425,7 @@ def consultas_editar(request, pk):
 @minified_response
 @login_required()
 def opiniones(request):
-	opiniones = Opiniones.objects.all()
+	opiniones = Opiniones.objects.order_by('-fecha_hora')
 	return render(request, 'opiniones.html', {'opiniones': opiniones})
 
 def generate_key(length):

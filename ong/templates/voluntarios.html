@@ -80,7 +80,6 @@
 						{% for v in voluntarios  %}
 							<tr {% if not v.estado  %} class="danger" {% else %} class="success" {% endif %} >
 							<td>{{forloop.counter}}</td>
-							<!-- <td><a href=""><img src="{{ v.foto.url }}" width="100px" alt=""></a></td> -->
 							<td>{{ v.identidad }}</td>
 							<td>{{ v.nombre }} {{ v.apellido }}</td>
 							<td>{{ v.telefono }}</td>

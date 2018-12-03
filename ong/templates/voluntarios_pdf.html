@@ -60,7 +60,7 @@
 		}
 		table {
 		    border-collapse: collapse;
-		    border: 1 solid #31708F;
+		    border: 1 solid #347AB6 /* #31708F */;
 		    width: 100%;
 
 
@@ -80,7 +80,7 @@ td{
 }
 
 th {
-    background-color: #31708F;
+    background-color:  #347AB6 /* #31708F */;
     color: white;
     font-weight: bold;
     font-size: 10px;
@@ -134,7 +134,9 @@ th {
 			{% for r in object_list %}
 									<tr>
 										<td>{{ forloop.counter }}</td>
-										<td><a><img width="40px" src="{{ r.foto.url }}" alt=""> </a></td>
+										<td> {% if r.foto  %}
+											<a><img width="40px" src="{{ r.foto.url }}" alt=""> </a>
+										{% endif %}</td>
 										<td>
 											{{r.identidad}}
 										</td>
