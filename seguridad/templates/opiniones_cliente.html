@@ -1,0 +1,46 @@
+{% extends "base_out.html" %}
+
+{% block contenido %}
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<textarea rows="5" id="opinion" class="form-control" placeholder="Precione enter para publicar tu opinión"></textarea>
+		</div>	
+	</div>
+	<br>
+		<div id="opiniones">
+			{% for c in opiniones  %}
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<strong>Anónimo</strong><br>
+						{{c.opinion|linebreaks}}
+						<small style="color:#9A9999">hacé {{c.fecha_hora|timesince}}</small>
+				    </div>
+				</div>
+			{% endfor %}
+		</div>
+	
+
+{% endblock contenido %}
+
+{% block script %}
+	<script>
+		$(function(){
+			$('#opinion').on('keypress', function(e){
+				var tecla = e.which || e.keyCode;
+
+				if(tecla == 13){
+					if($(this).val().trim() == ''){
+						return;
+					}
+
+				$.get('{% url "opiniones_guardar" %}', {'opinion': $(this).val().trim()}, function(data){
+						$('#opiniones').prepend(data.opinion);
+						$('#opinion').val('');
+						$('#opinion').focus();
+					})
+				}
+			});
+		});
+	</script>
+{% endblock script %}

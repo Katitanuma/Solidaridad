@@ -1,0 +1,75 @@
+{% extends "base_in.html" %}
+{% block titulo %}
+	Opiniones
+{% endblock titulo %}
+{% block contenidoApp %}
+	<div class="row">
+	
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Listado de Opiniones</h3>
+			</div>
+			<div class="tablas_registros">
+				<br>
+				<table style="width:100%" id="tb" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Opinion</th>
+							<th style="width:220px">Fecha Hora</th>
+						</tr>
+					</thead>
+					<tbody id="filas">
+						{% for o in opiniones  %}
+							<tr>
+								<td>{{forloop.counter}}</td>
+								<td>{{ o.opinion}}</td>
+								<td>{{ o.fecha_hora}}</td>
+							</tr>
+					{% endfor %}
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+	
+</div>
+{% endblock contenidoApp %}
+{% block script %}
+	<script>
+	
+		var tablex = $('#tb').DataTable({
+	/*			 dom: 'Bfrtip',*/
+				 lengthChange: false,
+        		 buttons: [ 'copy', 'excel', 'pdf', 'colvis',  {
+		                extend: 'pdfHtml5',
+		                download: 'open',
+		                orientation: 'landscape',
+		                pageSize: 'LEGAL',
+		                text: 'Ver',
+		                title: 'Reporte de Consultas'
+		            }],
+			 	 "scrollX": true,
+			 	  "language": {
+		            "lengthMenu": "Mostrar _MENU_ por páginas",
+		            "zeroRecords": "No se encontró ningún registro",
+		            "info": "Mostrando página _PAGE_ de _PAGES_",
+		            "infoEmpty": "Registro no valido",
+		            "infoFiltered": "(filtrado de _MAX_ registros totales)",
+		            'search': 'Buscar:'
+		            /*'search': 'Buscar: _INPUT_ aqui'*/,
+		             "paginate": {
+					      "next": "Siguiente",
+					      'previous': 'Anterior'
+				 	},
+				 	buttons: {
+		                colvis: 'Columnas visibles',
+		                copy: 'Copiar'
+		            }
+				 }
+			 });
+
+			 tablex.buttons().container()
+       		 .appendTo( '#tb_wrapper .col-sm-6:eq(0)' );
+	</script>
+{% endblock script %}

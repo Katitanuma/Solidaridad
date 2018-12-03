@@ -32,7 +32,8 @@ class Sexo(models.Model):
 	)
 
 	def __str__(self):
-		return ('Masculino' if self.nombre == 'M' else 'Femenino')
+		#return ('Masculino' if self.nombre == 'M' else 'Femenino')
+		return self.get_nombre_display()
 
 @python_2_unicode_compatible
 class Voluntario(models.Model):
@@ -58,11 +59,12 @@ class Evento(models.Model):
 	descripcion = models.TextField()
 	fecha_Hora = models.DateTimeField()
 	usuario = models.ForeignKey(User)
-	depto = models.ManyToManyField(Departamento)
-	voluntario = models.ManyToManyField(Voluntario)
+	departamentos = models.ManyToManyField(Departamento, verbose_name='Departamentos')
+	voluntarios = models.ManyToManyField(Voluntario)
+	estado = models.BooleanField(default=True)
 
 	def __str__(self):
-		return '{} el dia {} en los departamentos {}' .format(self.nombre, self.fechaHora, ",".join([d.depto for d in self.depto.all()]))
+		return '{} el dia {} en los departamentos {}' .format(self.nombre, self.fecha_Hora, ",".join([d.depto for d in self.departamentos.all()]))
 
 class Banco_Informacion(models.Model):
 	descripcion = models.CharField(max_length=100, null=True)
@@ -97,25 +99,16 @@ class Opiniones(models.Model):
 		return self.opinion
 
 @python_2_unicode_compatible
-class Auditoria(models.Model):
-	usuario = models.ForeignKey(User)
-	accion = models.TextField()
-	fecha_hora = models.DateTimeField(auto_now_add=True)
-
-	def __str__(self):
-		return '%s - %s' %(accion, fecha_hora)
-
-@python_2_unicode_compatible
 class Contactanos(models.Model):
 	nombre = models.CharField(max_length=50)
 	apellido = models.CharField(max_length=50)
 	telefono = models.CharField(max_length=9, blank=True)
 	correo = models.EmailField(max_length=100, blank=True)
 	mensaje = models.TextField()
-	fecha_hora = models.DateTimeField()
-	estado = models.BooleanField(default=False)
+	fecha_hora = models.DateTimeField(auto_now_add=True)
+	estado = models.BooleanField(default=True)
 
 	def __str__(self):
-		return '%s - %s' %(nombre, apellido)
+		return '%s - %s' %(self.nombre, self.apellido)
 
 

@@ -73,7 +73,7 @@
 							<th>Tipo</th>
 							<th>Estado</th>
 							<th>Usuario</th>
-							<th>Acción</th>
+							<th style="width:200px">Acciones</th>
 						</tr>
 					</thead>
 					<tbody id="filas">
@@ -96,7 +96,10 @@
 								{% endif %}
 							</td>
 							<td>{{ v.usuario }}</td>
-							<td><a class="btn btn-primary" href="{% url 'app:editarVoluntario' v.pk %}">Editar</a></td>
+							<td><a class="btn btn-primary" href="{% url 'app:editarVoluntario' v.pk %}">Editar</a>
+								<a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarVoluntario' v.pk %}">Eliminar</a>
+								<a class="btn btn-warning" id="delete_a" href="{% url 'app:usuario' v.usuario.pk %}">Usuario</a></td>
+
 						</tr>
 					{% endfor %}
 				</tbody>
@@ -109,6 +112,10 @@
 {% endblock contenidoApp %}
 {% block script %}
 	<script>
+
+		$('#delete_a').on('click', function(){
+			return confirm('¿Esta seguro de eliminar el registro?');
+		})
 		{% if error or form.errors %}
 			$.notify("Error al guardar el registro",{ 
 				className: 'error',

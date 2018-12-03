@@ -9,6 +9,14 @@
 	<link rel="stylesheet" href="{% static 'bootstrap/css/jasny-bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'bootstrap/css/datatable.css' %}">
 	<link rel="stylesheet" href="{% static 'bootstrap/css/buttons_datatable.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/datetimepicker.css' %}">
+	<style>
+		.panel {
+			/* -webkit-box-shadow: 6px 5px 35px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 6px 5px 35px 0px rgba(0,0,0,0.75);
+			box-shadow: 6px 5px 35px 0px rgba(0,0,0,0.75); */
+		}
+	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -23,6 +31,7 @@
 		<script src="{% static 'bootstrap/js/jasny-bootstrap.js' %}"></script>
 		<script src="{% static 'js/grafico1.js' %}"></script>
 		<script src="{% static 'js/grafico2.js' %}"></script>
+		<script src="{% static 'js/grafico3.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable1.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable2.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable3.js' %}"></script>
@@ -33,11 +42,13 @@
 		<script src="{% static 'bootstrap/js/datatable8.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable9.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable10.js' %}"></script>
+		<script src="{% static 'bootstrap/js/bootstrap-datetimepicker.min.js' %}"></script>
 		{% load compress %}
 		{% compress js %}
 		<script>
 			var detector = !false;
 			//validate();
+			$('#imgF').prop('class', 'glyphicon glyphicon-menu-right')
 			
 			$('.btn-expand-collapse').click(function(e) {
 				detector = !detector;
@@ -49,12 +60,13 @@
 			$('.navbar-primary').toggleClass('collapsed');
 
 			function validate(){
-				if(!detector){
+				if(detector){
 						$('#imgF').prop('class', 'glyphicon glyphicon-menu-right')
 				}else{
 						$('#imgF').prop('class', 'glyphicon glyphicon-menu-left')
 				}
 			}
+
 		</script>
 		{% endcompress %}	
 		{% compress js %}

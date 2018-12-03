@@ -1,0 +1,97 @@
+{% extends "base_in.html" %}
+{% block titulo %}
+	Usuario
+{% endblock titulo %}
+{% block contenidoApp %}
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Actualización de Usuario</h3>
+			</div>
+			<div class="panel-body">
+				<form style="" action="{% url 'app:usuarioGuardar' %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="hidden" value="{{ id }}" name="id_dato">
+					<div class="col-md-6">
+						<label>Nombre de Usuario</label>
+						<input type="text" required class="form-control" name="username" value="{{u}}" placeholder="Nombre de Usuario">
+					</div>
+					<div class="col-md-6">
+						<label>Contraseña</label>
+						<input type="password" class="form-control" name="password" value="{{p}}" placeholder="Contraseña">
+					</div>
+					
+					
+					<div style="margin-top:10px" class="col-md-6">
+						<label>Confirmar Contraseña</label>
+						<input type="password" class="form-control" name="password2" value="{{p}}" placeholder="Confirmar Contraseña">
+					</div>
+					<br>
+					{% if user.is_superuser %}
+					<div style="margin-top:10px" class="col-md-6">
+						<label>Es Super Usuario</label>
+	<input type="checkbox" class="form-control" name="is_root" {% if is_root %}checked{% endif %} >
+
+					</div>
+					{% endif %}
+				
+				
+					<br>
+					<div class="col-md-12" style="text-align: right">
+						<a href="{% url 'app:home' %}" class="btn btn-labeled btn-danger" style="margin:5px"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancelar</a>
+						<button type="submit" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Guardar</button>
+
+					</div>
+				</form>
+			</div>
+			{% if form.errors %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{form.errors|title }}</strong></div>
+			{% endif %}
+			{% if error %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{error|title }}</strong></div>
+			{% endif %}
+			
+		</div>
+			
+</div>
+{% endblock contenidoApp %}
+{% block script %}
+	<script>
+		{% if error or form.errors %}
+			$.notify("Error al guardar el registro",{ 
+				className: 'error',
+				globalPosition:"right bottom", 
+				clickToHide: true,
+			  	autoHide: true,
+			 	autoHideDelay: 5000,
+			 	arrowShow: true,
+			 	arrowSize: 5,
+			 	style: 'bootstrap',
+			 	showAnimation: 'slideDown',
+			 	showDuration: 400,
+			 	hideAnimation: 'slideUp',
+			 	hideDuration: 200,
+			 	gap: 2
+			});
+		{% endif %}
+		{% if exito %}
+			$.notify('{{exito}}', 
+			{ 
+				className: 'success',
+				globalPosition:"right bottom", 
+				clickToHide: true,
+			  	autoHide: true,
+			 	autoHideDelay: 5000,
+			 	arrowShow: true,
+			 	arrowSize: 5,
+			 	style: 'bootstrap',
+			 	showAnimation: 'slideDown',
+			 	showDuration: 400,
+			 	hideAnimation: 'slideUp',
+			 	hideDuration: 200,
+			 	gap: 2
+			});
+		{% endif %}
+
+	</script>
+{% endblock script %}

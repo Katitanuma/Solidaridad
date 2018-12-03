@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reporte de Voluntarios</title>
+	{% load static %}
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<style>
+		h1 {
+			padding: 10px;
+			font-size: 20px;
+		}
+		table {
+		    border-collapse: collapse;
+		    border: 1 solid #31708F;
+		    width: 100%;
+	
+			}
+	
+			th, td {
+			    text-align: center;
+			    padding: 3px;
+	
+			}
+	
+	td{
+	  background-color: #C4E3F5;
+	   color: black;
+	    font-weight: bold;
+	}
+	
+	th {
+	    background-color: #31708F;
+	    color: white;
+	    font-weight: bold;
+	    font-size: 10px;
+	}
+		@page {
+			size: letter portrait;
+			@frame header_frame {
+				-pdf-frame-content: header_content;
+				/* -pdf-frame-border: 1;
+				left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+			}
+			@frame content_frame {
+				/* -pdf-frame-border: 1; */
+				left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+			}
+			@frame footer_frame {
+				-pdf-frame-content: footer_content;
+				/* -pdf-frame-border: 1; */
+				left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+			}
+		} 
+	</style>
+	<style>
+		h1 {
+			padding: 10px;
+			font-size: 20px;
+		}
+		table {
+		    border-collapse: collapse;
+		    border: 1 solid #31708F;
+		    width: 100%;
+
+
+			}
+
+			th, td {
+			    text-align: center;
+			    padding: 3px;
+
+			}
+
+td{
+  background-color: #C4E3F5;
+   color: black;
+    font-weight: bold;
+     font-size: 8px;
+}
+
+th {
+    background-color: #31708F;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+		@page {
+			size: letter landscape;
+			@frame header_frame {
+				-pdf-frame-content: header_content;
+				/* -pdf-frame-border: 1; */
+				left: 50pt; width: 690pt; top: 50pt; height: 40pt;
+			}
+			@frame content_frame {
+				/* -pdf-frame-border: 1; */
+				left: 50pt; width: 690pt; top: 90pt; height: 632pt;
+			}
+			@frame footer_frame {
+				-pdf-frame-content: footer_content;
+				/* -pdf-frame-border: 1; */
+				left: 50pt; width: 690pt; top: 772pt; height: 20pt;
+			}
+		} 
+	</style>
+</head>
+<body>
+	<div id="header_content">
+		<img src="{% static 'imgs/logo.png' %}" width="70px"alt="">
+		<h1 style="display:inline-block"> LISTADO DE VOLUNTARIOS</h1>
+	</div>
+	<div id="footer_content">
+		página <pdf:pagenumber> de <pdf:pagecount>	
+	</div>
+	<table>
+		<thead>
+			
+				<tr>
+					<th>#</th>
+					<th>Foto</th>
+					<th>Identidad</th>
+					<th>Nombre</th>
+					<th>Apellidos</th>
+					<th>Departamento</th>
+					<th>Telefono</th>
+					<th style="width:200px">Correo</th>
+					<th>Sexo</th>
+					<th>Usuario</th>
+					<th>Tipo</th>
+					<th>Estado</th>
+				</tr>
+		</thead>
+		<tbody>
+			{% for r in object_list %}
+									<tr>
+										<td>{{ forloop.counter }}</td>
+										<td><a><img width="40px" src="{{ r.foto.url }}" alt=""> </a></td>
+										<td>
+											{{r.identidad}}
+										</td>
+										<td>
+											{{r.nombre}}
+										</td>
+										<td>
+											{{r.apellido}}
+										</td>
+										<td>
+											{{r.depto}}
+										</td>
+										<td>
+											{{r.telefono}}
+										</td>
+										<td >
+											{{r.correo}}
+										</td>
+										<td>
+											{{r.sexo}}
+										</td>
+										<td>
+											{{r.usuario}}
+										</td>
+										<td>
+											{{r.tipo}}
+										</td>
+										<td>
+											{% if r.estado %}
+												Activo
+												{% else %}
+												Inactivo
+											{% endif %}
+										</td>
+									</tr>
+								{% endfor %}
+	
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,209 @@
+{% extends "base_in.html" %}
+{% block titulo %}
+	Eventos
+{% endblock titulo %}
+{% block contenidoApp %}
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Gestión de eventos</h3>
+			</div>
+			<div class="panel-body">
+				<form style="" action="{% url 'app:guardarEventos' %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="hidden" value="{{ id }}" name="id_dato">
+					<div class="row">
+						{% for field in form  %}
+							
+							{% if field.label != 'Usuario' and field.label != 'Descripcion' and field.label != 'Fecha Hora' %}
+								<div class="col-md-4">
+									<label>{{field.label}}</label>
+									{{field}}
+								</div>
+							{% endif %}
+							
+						{% endfor %}
+
+						 <div class="form-group col-md-4">
+			                <label for="dtp_input1">Fecha Hora</label>
+			                <div class="input-group date form_datetime col-md-12"  data-date-format="dd/mm/yyyy hh:ii:mm" data-link-field="dtp_input1">
+			                    {{form.fecha_Hora}}
+			                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+			                </div>
+							<input type="hidden" id="dtp_input1" value="" /><br/>
+			            </div>
+					
+						<div class="col-md-4">
+							<label>Descripción</label>
+							{{form.descripcion}}
+						</div>
+						<div class="col-md-4">
+							{{form.usuario}}
+						</div>
+					</div>
+				
+					<br>
+					<div class="col-md-12" style="text-align: right">
+						<a href="{% url 'app:eventos' %}" class="btn btn-labeled btn-info" style="margin:5px"><span class="btn-label"><i class="glyphicon glyphicon-plus"></i></span>Nuevo</a>
+						<button type="submit" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Guardar</button>
+
+					</div>
+				</form>
+			</div>
+			{% if form.errors %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{form.errors|title }}</strong></div>
+			{% endif %}
+			{% if error %}
+				<div class="alert alert-danger" style="margin:10px" role="alert"><strong>{{error|title }}</strong></div>
+			{% endif %}
+			
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Listado de eventos</h3>
+			</div>
+			<!-- <div class="panel-body">
+							<p>...</p>
+			</div> -->
+			<div class="tablas_registros">
+				<br>
+				<table style="width:100%" id="tb" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Nombre</th>
+							<th>Descripción</th>
+							<th style="width:100px">Fecha Hora</th>
+							<th>Usuario</th>
+							<th style="width:200px">Departamentos</th>
+							<th style="width:300px">Voluntarios</th>
+							<th>Estado</th>
+							<th style="width:400px">Acciones</th>
+						</tr>
+					</thead>
+					<tbody id="filas">
+						{% for e in eventos  %}
+							<tr {% if not e.estado  %} class="danger" {% else %} class="success" {% endif %} >
+							<td>{{forloop.counter}}</td>
+							<td>{{ e.nombre}}</td>
+							<td>{{ e.descripcion}}</td>
+							<td>{{ e.fecha_Hora}}</td>
+							<td>{{ e.usuario}}</td>
+							<td>
+								{% for d in e.departamentos.all  %}
+									<li>{{d}}</li>
+								{% endfor %}
+							</td>
+							<td>
+								{% for voluntario in e.voluntarios.all  %}
+									<li>{{voluntario.nombre}} {{voluntario.apellido}}</li>
+								{% endfor %}
+							</td>
+							<td>{% if e.estado %}
+								Activo
+								{% else %}
+								Inactivo
+							{% endif %}</td>
+							<td style="text-align:right"><a class="btn btn-primary" href="{% url 'app:editarEventos' e.pk %}">Editar</a>
+								<a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarEventos' e.pk %}">Eliminar</a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+	
+</div>
+{% endblock contenidoApp %}
+{% block script %}
+	<script>
+
+		$('#delete_a').on('click', function(){
+			return confirm('¿Esta seguro de eliminar el registro?');
+		})
+		 $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+		{% if error or form.errors %}
+			$.notify("Error al guardar el registro",{ 
+				className: 'error',
+				globalPosition:"right bottom", 
+				clickToHide: true,
+			  	autoHide: true,
+			 	autoHideDelay: 5000,
+			 	arrowShow: true,
+			 	arrowSize: 5,
+			 	style: 'bootstrap',
+			 	showAnimation: 'slideDown',
+			 	showDuration: 400,
+			 	hideAnimation: 'slideUp',
+			 	hideDuration: 200,
+			 	gap: 2
+			});
+		{% endif %}
+		{% if exito %}
+			$.notify('{{exito}}', 
+			{ 
+				className: 'success',
+				globalPosition:"right bottom", 
+				clickToHide: true,
+			  	autoHide: true,
+			 	autoHideDelay: 5000,
+			 	arrowShow: true,
+			 	arrowSize: 5,
+			 	style: 'bootstrap',
+			 	showAnimation: 'slideDown',
+			 	showDuration: 400,
+			 	hideAnimation: 'slideUp',
+			 	hideDuration: 200,
+			 	gap: 2
+			});
+			//$.notify('{{exito}}', "success", { position:"right bottom" });
+			//$.notify("Access granted", "info");
+			//$.notify("Warning: Self-destruct in 3.. 2..", "warn");
+		{% endif %}
+
+		var tablex = $('#tb').DataTable({
+	/*			 dom: 'Bfrtip',*/
+				 lengthChange: false,
+        		 buttons: [ 'copy', 'excel', 'pdf', 'colvis',  {
+		                extend: 'pdfHtml5',
+		                download: 'open',
+		                orientation: 'landscape',
+		                pageSize: 'LEGAL',
+		                text: 'Ver',
+		                title: 'Reporte de eventos'
+		            }],
+			 	 "scrollX": true,
+			 	  "language": {
+		            "lengthMenu": "Mostrar _MENU_ por páginas",
+		            "zeroRecords": "No se encontró ningún registro",
+		            "info": "Mostrando página _PAGE_ de _PAGES_",
+		            "infoEmpty": "Registro no valido",
+		            "infoFiltered": "(filtrado de _MAX_ registros totales)",
+		            'search': 'Buscar:'
+		            /*'search': 'Buscar: _INPUT_ aqui'*/,
+		             "paginate": {
+					      "next": "Siguiente",
+					      'previous': 'Anterior'
+				 	},
+				 	buttons: {
+		                colvis: 'Columnas visibles',
+		                copy: 'Copiar'
+		            }
+				 }
+			 });
+
+			 tablex.buttons().container()
+       		 .appendTo( '#tb_wrapper .col-sm-6:eq(0)' );
+	</script>
+{% endblock script %}

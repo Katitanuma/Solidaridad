@@ -52,7 +52,7 @@
 							<th>#</th>
 							<th>Pregunta</th>
 							<th>Respuesta</th>
-							<th>Acción</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody id="filas">
@@ -61,7 +61,7 @@
 							<td>{{forloop.counter}}</td>
 							<td>{{ p.pregunta}}</td>
 							<td>{{ p.respuesta}}</td>
-							<td style="text-align:right"><a class="btn btn-primary" href="{% url 'app:editarPreguntas' p.pk %}">Editar</a></td>
+							<td style="text-align:right"><a class="btn btn-primary" style="margin:5px" href="{% url 'app:editarPreguntas' p.pk %}">Editar</a><a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarPregunta' p.pk %}">Eliminar</a></td>
 						</tr>
 					{% endfor %}
 				</tbody>
@@ -74,6 +74,9 @@
 {% endblock contenidoApp %}
 {% block script %}
 	<script>
+		$('#delete_a').on('click', function(){
+			return confirm('¿Esta seguro de eliminar el registro?');
+		})
 		{% if error or form.errors %}
 			$.notify("Error al guardar el registro",{ 
 				className: 'error',

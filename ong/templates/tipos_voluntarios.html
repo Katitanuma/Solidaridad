@@ -46,7 +46,7 @@
 						<tr>
 							<th>#</th>
 							<th>Tipo</th>
-							<th>Acción</th>
+							<th style="width:150px">Acciónes</th>
 						</tr>
 					</thead>
 					<tbody id="filas">
@@ -54,7 +54,7 @@
 							<tr>
 							<td>{{forloop.counter}}</td>
 							<td>{{ v.tipo}}</td>
-							<td style="text-align:right"><a class="btn btn-primary" href="{% url 'app:editarTiposVoluntarios' v.pk %}">Editar</a></td>
+							<td style="text-align:right"><a style="margin:5px" class="btn btn-primary" href="{% url 'app:editarTiposVoluntarios' v.pk %}">Editar</a><a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarTipoVoluntario' v.pk %}">Eliminar</a></td>
 						</tr>
 					{% endfor %}
 				</tbody>
@@ -67,6 +67,9 @@
 {% endblock contenidoApp %}
 {% block script %}
 	<script>
+		$('#delete_a').on('click', function(){
+			return confirm('¿Esta seguro de eliminar el registro?');
+		})
 		{% if error or form.errors %}
 			$.notify("Error al guardar el registro",{ 
 				className: 'error',

@@ -66,3 +66,23 @@ class PreguntasFrecuentesForm(ModelForm):
 		super(PreguntasFrecuentesForm, self).__init__(*args, **kwargs)
 		for campo in self.fields:
 			self.fields[campo].widget.attrs['class'] = 'form-control'
+
+class EventoForm(ModelForm):
+	class Meta:
+		model = Evento
+		fields = '__all__'
+	def __init__(self, *args, **kwargs):
+		super(EventoForm, self).__init__(*args, **kwargs)
+		for campo in self.fields:
+			self.fields[campo].widget.attrs['class'] = 'form-control'
+		self.fields['voluntarios'].widget.attrs['data-live-search'] = 'true'
+		self.fields['voluntarios'].widget.attrs['class'] = 'selectpicker form-control'
+		self.fields['voluntarios'].widget.attrs['title'] = u'Ningún voluntario seleccionado'
+		self.fields['voluntarios'].querySet= Voluntario.objects.filter(estado = True)
+		self.fields['departamentos'].widget.attrs['data-live-search'] = 'true'
+		self.fields['usuario'].widget = forms.HiddenInput()
+		self.fields['descripcion'].widget.attrs['rows'] = '4' 
+		self.fields['fecha_Hora'].widget.attrs['size'] = '16' 
+		self.fields['fecha_Hora'].widget.attrs['readonly'] = 'readonly' 
+		self.fields['departamentos'].widget.attrs['class'] = 'selectpicker form-control'
+		self.fields['departamentos'].widget.attrs['title'] = u'Ningún departamento seleccionado'

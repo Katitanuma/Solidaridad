@@ -1,0 +1,2 @@
+;var detector=!false;$('#imgF').prop('class','glyphicon glyphicon-menu-right')
+$('.btn-expand-collapse').click(function(e){detector=!detector;validate();$('.navbar-primary').toggleClass('collapsed');});$('.navbar-primary').toggleClass('collapsed');function validate(){if(detector){$('#imgF').prop('class','glyphicon glyphicon-menu-right')}else{$('#imgF').prop('class','glyphicon glyphicon-menu-left')}}

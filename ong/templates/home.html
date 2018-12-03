@@ -1,8 +1,387 @@
 {% extends "base_in.html" %}
 {% block contenidoApp %}
 	{% load static %}
-	<div style="text-align:center">
+	<!-- <div style="text-align:center">
 		<img src="{% static 'imgs/logo1.jpg' %}" alt="" width="60%" height="500px" >
+	</div> -->
+	<div class="row">
+		<div  style="height:268px"class="col-md-6" id="grafico1">
+			
+		</div>
+		<div style="height:268px" class="col-md-6" id="grafico2">
+			
+		</div>
+	</div>
+	<br>
+	<div  class="row">
+		<div style="height:268px"  class="col-md-6" id="grafico3">
+			
+		</div>
+		<div style="height:268px" class="col-md-6" id="grafico4">
+			
+		</div>
 	</div>
 	
+	
 {% endblock %}
+
+
+{% block script %}
+	 <script>
+     $(function(){
+        /* var bibliotecarios  = {{ bibliotecarios|safe }};
+         var prestamos = {{ prestamos|safe }};
+         var ventas = {{ ventas|safe }};
+
+         $('#grafico1').highcharts({
+             title:{text:'Estadísticas de bibliotecarios'},
+             xAxis:{categories:bibliotecarios},
+             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:1,color:'#808080'}]},
+             tooltip:{valueSuffix:' veces'},
+             legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
+             series:[{type: 'column',name: 'Prestamos',data: prestamos}, 
+             {type: 'column',name: 'Ventas',data: ventas}, 
+           ],
+             plotOptions:{line:{dataLabels:{enabled:true}}}
+         });*/
+
+
+var e1 = {{ e1|safe }};
+var e2 = {{ e2|safe }};
+var e3 = {{ e3|safe }};
+var ed = [];
+
+e2.forEach(function(item, index){
+	ed.push({
+        name: item,
+        data: e3[index]
+    })
+})
+
+
+
+
+Highcharts.chart('grafico2', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Eventos por Departamentos'
+    },
+    subtitle: {
+        text: 'Número de eventos por departamentos mensuales'
+    },
+    xAxis: {
+        categories: e1,
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Número de Eventos',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' Eventos'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: ed /*[{
+        name: 'Year 1800',
+        data: [107, 31, 635, 203, 2]
+    }]*/
+});
+
+
+
+var d1 = {{ d1|safe }};
+var d2 = {{ d2|safe }};
+var d3 = {{ d3|safe }};
+var d = [];
+var dx = [];
+
+d1.forEach(function(item, index){
+	d.push({
+            "name": item,
+            "y": d2[index],
+            "drilldown": item
+       })
+	dx.push({
+		"name": item,
+        "id": item,
+        "data": d3[index] })
+})
+console.log(dx)
+
+Highcharts.chart('grafico3', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Voluntarios por Departamento'
+    },
+    subtitle: {
+        text: 'Descripción detallada de los voluntarios por cada Departamento, y Eventos por cada Voluntario'
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Número de Voluntarios'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.0f}'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> en total<br/>'
+    },
+
+    "series": [
+        {
+            "name": "Departamentos",
+            "colorByPoint": true,
+            "data": d /*[
+                {
+                    "name": "Chrome",
+                    "y": 62.74,
+                    "drilldown": "Chrome"
+                }
+            ]*/
+        }
+    ],
+    "drilldown": {
+        "series": dx /* [
+            {
+                "name": "Chrome",
+                "id": "Chrome",
+                "data": [
+                    [
+                        "v65.0",
+                        0.1
+                    ],
+                    [
+                        "v64.0",
+                        1.3
+                    ],
+                    [
+                        "v63.0",
+                        53.02
+                    ],
+                    [
+                        "v62.0",
+                        1.4
+                    ],
+                    [
+                        "v61.0",
+                        0.88
+                    ],
+                    [
+                        "v60.0",
+                        0.56
+                    ],
+                    [
+                        "v59.0",
+                        0.45
+                    ],
+                    [
+                        "v58.0",
+                        0.49
+                    ],
+                    [
+                        "v57.0",
+                        0.32
+                    ],
+                    [
+                        "v56.0",
+                        0.29
+                    ],
+                    [
+                        "v55.0",
+                        0.79
+                    ],
+                    [
+                        "v54.0",
+                        0.18
+                    ],
+                    [
+                        "v51.0",
+                        0.13
+                    ],
+                    [
+                        "v49.0",
+                        2.16
+                    ],
+                    [
+                        "v48.0",
+                        0.13
+                    ],
+                    [
+                        "v47.0",
+                        0.11
+                    ],
+                    [
+                        "v43.0",
+                        0.17
+                    ],
+                    [
+                        "v29.0",
+                        0.26
+                    ]
+                ]
+            }
+        ]*/
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var deptos1  = {{ deptos1|safe }};
+var deptos2  = {{ deptos2|safe }};
+var deptos = new Array();
+deptos1.forEach(function(item, index){
+	deptos.push({'name': item, 'y': deptos2[index]})
+})
+
+Highcharts.chart('grafico1', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Porcentaje de Voluntarios por Departamento'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Porcentaje',
+        colorByPoint: true,
+        data: deptos/*[{
+            name: 'Chrome',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, /*{
+            name: 'Internet Explorer',
+            y: 11.84
+        }*///]*/
+    }]
+});
+
+
+var tipo1  = {{ tipo1|safe }};
+var tipo2  = {{ tipo2|safe }};
+var tipos = new Array();
+tipo1.forEach(function(item, index){
+	tipos.push({'name': item, 'y': tipo2[index]})
+})
+
+Highcharts.chart('grafico4', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Voluntarios por Tipo'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Porcentaje',
+        colorByPoint: true,
+        data: tipos
+    }]
+});
+
+
+
+
+
+
+
+        
+     });
+    </script>
+{% endblock script %}

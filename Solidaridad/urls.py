@@ -24,7 +24,9 @@ urlpatterns = [
     url(r'^(?P<id>\d+)/$', views.diseno, name='diseno'),
     url(r'^$', views.diseno, name='diseno'),
     url(r'^security/', include('seguridad.urls')),
-    url(r'^application/', include('ong.urls'))
+    url(r'^application/', include('ong.urls')),
+     url(r'^opiniones$', views.opiniones, name='opiniones_cliente'),
+     url(r'^opiniones_guardar$', views.opiniones_guardar, name='opiniones_guardar'),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

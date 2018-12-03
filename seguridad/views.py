@@ -3,10 +3,12 @@ from __future__ import unicode_literals
 
 from htmlmin.decorators import minified_response
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
+from ong.models import Opiniones
+from django.template.defaultfilters import timesince, linebreaks
 
 @minified_response
 def login_form(request):
@@ -52,3 +54,28 @@ def diseno(request, id = 0):
 			return HttpResponseRedirect(reverse('security:login_form'))
 		else:
 			return render(request, 'home.html')
+
+@minified_response
+def opiniones(request):
+	opiniones = Opiniones.objects.order_by('-fecha_hora')
+	return render(request, 'opiniones_cliente.html', {'opiniones': opiniones})
+
+@minified_response
+def opiniones_guardar(request):
+	if request.is_ajax():
+		opinion = Opiniones()
+		opinion.opinion = request.GET['opinion']
+		opinion.save()
+		o = '''
+			<div class="panel panel-default">
+						  <div class="panel-body">
+						  	<strong>Anónimo</strong><br>
+						    {}
+						    <small style="color:#9A9999">hacé {}</small>
+						  </div>
+			</div>
+		'''.format(linebreaks(opinion.opinion), timesince(opinion.fecha_hora))
+		return JsonResponse({'opinion': o})
+	else:
+		return HttpResponseRedirect(reverse('opiniones_cliente'))
+
