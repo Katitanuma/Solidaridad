@@ -1,5 +1,6 @@
 {% extends "base_out.html" %}
 {% block contenido %}
+	
 	<style>
 		.errorlist {
 			display: none;
@@ -14,8 +15,9 @@
 			}
 		}
 	</style>
-	<div id="modelForm" style="">
-	  <h1>Login</h1>
+	<div class="container">
+		<div id="modelForm" style="">
+	  <h2>Inicio de Sesión</h2>
 	  <form action="{% url 'security:log_in' %}" method="post">
 	  		{% csrf_token %}
 	   		{{ form.as_p }}
@@ -30,4 +32,6 @@
 	  <br>
 	  <br>
 	</div>
+	</div>
+	
 {% endblock contenido %}

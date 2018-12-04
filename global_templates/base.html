@@ -10,7 +10,11 @@
 	<link rel="stylesheet" href="{% static 'bootstrap/css/datatable.css' %}">
 	<link rel="stylesheet" href="{% static 'bootstrap/css/buttons_datatable.css' %}">
 	<link rel="stylesheet" href="{% static 'bootstrap/css/datetimepicker.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" href="{% static 'css/estilo2.css' %}">
 	<link rel="shortcut icon" type="image/x-icon" href="{% static 'imgs/logo.png' %}">
+
 	<style>
 		.panel {
 			/* -webkit-box-shadow: 6px 5px 35px 0px rgba(0,0,0,0.75);
@@ -21,7 +25,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-	<div class="container">
+	
 		{% block contenido %}
 			
 		{% endblock contenido %}
@@ -44,6 +48,7 @@
 		<script src="{% static 'bootstrap/js/datatable9.js' %}"></script>
 		<script src="{% static 'bootstrap/js/datatable10.js' %}"></script>
 		<script src="{% static 'bootstrap/js/bootstrap-datetimepicker.min.js' %}"></script>
+		<script src="{% static 'js/website.js' %}"></script>
 		{% load compress %}
 		{% compress js %}
 		<script>
@@ -74,6 +79,5 @@
 		{% block script %}{% endblock  %}
 		{% endcompress %}
 		
-	</div>
 </body>
 </html>

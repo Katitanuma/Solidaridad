@@ -1,0 +1,189 @@
+{% extends "base_out.html" %}
+{% block titulo %}Voluntarios{% endblock  %}
+{% load static %}
+{% block content_out %}
+<div class="nav2">
+  <ul id="Nav3" class="menuS">
+    <li><a href="#TVol"><strong>Tipos de Voluntarios</strong></a></li>
+    <li><a href="#Consultas"><strong>Consultas</strong></a></li>
+  </ul>
+</div>
+<ul class="nav3">
+  <li><p><strong class="etiquetaV1"></strong></p><a class="V1" href="#TVol"></a></li>
+  <li><p><strong class="etiquetaV2"></strong></p><a class="V2" href="#Consultas"></a></li>
+</ul>
+<div id="TVol" class="jumbotron">
+  <div class="container">
+    <h1 id="TCNSL">Tipos de Voluntarios</h1>
+    <div class="CARD5">
+      <div class="Front5">
+        <img src="{% static 'imgs/Actividad.jpg' %}" alt="..." class="img-thumbnail VA">
+        <h1  id="MA" class="TVo" data-toggle="modal" data-target="#myModalA">Voluntarios de Actividades</h1>
+      </div>
+    </div>
+    
+    <div class="CARD6">
+      <div class="Front6">
+        <img src="{% static 'imgs/gestion.jpg' %}" alt="..." class="img-thumbnail VG">
+        <h1 id="MG" class="TVo" data-toggle="modal" data-target="#myModalG">Voluntarios de Gestion</h1>
+      </div>
+    </div>
+    
+    <div class="CARD7">
+      <div class="Front7">
+        <img src="{% static 'imgs/Lideres.jpg' %}" alt="..." class="img-thumbnail VL">
+        <h1  id="ML" class="TVo" data-toggle="modal" data-target="#myModalL">Voluntario Lider</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Consultas" class="jumbotron">
+  <h1 id="TCNSL"> Consultas</h1>
+</div>
+<div class="modal fade" id="myModalA" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Caracteristicas</h4>
+      </div>
+      <div class="modal-body">
+        <p  class="caracteristicas" align="justify">
+          1. <strong>Grado de compromiso:</strong>  Medio bajo u bajo. <br><br>
+          2. <strong>Horas disponibles para darle a solidaridad:</strong>  2 horas al mes o por voluntariado especifico y     puntual que se requiera <br><br>
+          3. <strong>Competencias:</strong>
+          <ul class="itemsG">
+            <li>Ser pro-activo</li>
+            <li>Tener iniciativa</li>
+            <li>Tener deseo de ayudar</li>
+            <li>Alta  sensibilidad por los demás</li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify">
+          4.  <strong>Actividades que debe hacer:</strong>
+          <ul class="itemsG">
+            <li>Voluntariados puntuales que se requieran
+              <ul>
+                <li>Día del niño</li>
+                <li>Navidad</li>
+                <li>CNS Izopo</li>
+                <li>Hipersoli</li>
+                <li>Actividades para recaudar fondos</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify">
+          5. <strong>Formación académica:</strong> No indispensable <br><br>
+          6. <strong>Experiencia Profesional:</strong> No indispensable <br><br>
+          7. <strong>Experiencia como voluntario:</strong> Ninguna requerida <br><br>
+          8. <strong>Destrezas o capacidades a utilizar:</strong>
+          <ul class="itemsG">
+            <li>Cabeza: 50%</li>
+            <li>Corazón: 100%</li>
+            <li>Manos: 100%</li>
+          </ul>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModalG" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Caracteristicas</h4>
+      </div>
+      <div class="modal-body">
+        <p  class="caracteristicas" align="justify">1.  <strong>Grado de compromiso:</strong> Alto <br><br>
+          2.  <strong>Horas disponibles para darle a solidaridad:</strong> Una a tres horas por semana.<br><br>
+          3.  <strong>Competencias:</strong>
+          <ul class="itemsG">
+            <li>Ser pro activo</li>
+            <li>Tener iniciativa</li>
+            <li>Estar orientado solucionar problemas</li>
+            <li>Tener alta  sensibilidad por los demás</li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify">
+          4.  <strong>Actividades que debe hacer:</strong>
+          <ul class="itemsG">
+            <li>Proyectos Especiales</li>
+            <li>Cooperar con  los líderes de Junta Directiva con iniciativas proyectos</li>
+            <li>Programas para conseguir fondos</li>
+            <li>Debe estar comprometido con la organización</li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify"> 5. <strong>Formación académica:</strong> No indispensable<br><br>
+          6.  <strong>Experiencia Profesional:</strong> No indispensable<br><br>
+          7.  <strong>Experiencia como voluntario: </strong> No<br><br>
+          8.  <strong>Tipo  de utilización de sus capacidades:</strong>
+          <ul class="itemsG">
+            <li>Cabeza: 80%</li>
+            <li>Corazón: 100%</li>
+            <li>Manos: 100%</li>
+          </ul><br><br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModalL" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Caracteristicas</h4>
+      </div>
+      <div class="modal-body">
+        <p  class="caracteristicas" align="justify">1.  <strong>Grado de compromiso:</strong> Alto <br><br>
+          2.  <strong>Horas disponibles para darle a solidaridad:</strong> Tres horas por semana o más.<br><br>
+          3.  <strong>Competencias:</strong>
+          <ul class="itemsG">
+            <li>Ser pro activo</li>
+            <li>Tener destrezas administrativas básicas</li>
+            <li>tener iniciativa</li>
+            <li>Estar orientado solucionar problemas</li>
+            <li>Ser creativo e innovador</li>
+            <li>Trabajar en equipo</li>
+            <li>Trabajar bajo presión </li>
+            <li>Tener alta  sensibilidad por los demás</li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify">
+          4.  <strong>Actividades que debe hacer:</strong>
+          <ul class="itemsG">
+            <li>Podrá ser miembro de Junta Directiva y liderará proyectos o programas</li>
+            <li>Será responsable de conseguir fondos, donantes y ser activo estar 100%,</li>
+            <li>1% empapado de la organización  </li>
+            <li>Estar apasionado por la organización</li>
+          </ul>
+        </p>
+        <p class="caracteristicas" align="justify"> 5. <strong>Formación académica:</strong> No indispensable<br><br>
+          6.  <strong>Experiencia Profesional:</strong> No indispensable<br><br>
+          7.  <strong>Experiencia como voluntario: </strong> Por lo menos 6 meses ,en solidaridad o en otra organización<br><br>
+          8.  <strong>Tipo  de utilización de sus capacidades:</strong>
+          <ul class="itemsG">
+            <li>Cabeza: 100%</li>
+            <li>Corazón: 100%</li>
+            <li>Manos: 100%</li>
+          </ul><br><br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock  %}

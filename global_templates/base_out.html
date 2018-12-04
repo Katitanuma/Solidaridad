@@ -1,1 +1,54 @@
 {% extends "base.html" %}
+{% load static %}
+{% block contenido %}
+	<nav class="navbar navbar-fixed-top" style="background: black;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span style="border:1px solid #eee" class="icon-bar"></span>
+        <span style="border:1px solid #eee" class="icon-bar"></span>
+        <span style="border:1px solid #eee" class="icon-bar"></span>
+      </button>
+      <img id="Logo" src="{% static 'imgs/LOGO.png' %}" alt="" style="height:50px; margin-left: 30px;">
+    </div>
+    <div id="navbar" class="collapse navbar-collapse"  style="padding: 0px 20px; height: 30px;">
+      <ul class="nav navbar-nav">
+        <li><a class="na" href="{% url 'quienes_somos' %}">¿Quiénes somos?</a></li>
+        <li><a class="na" href="{% url 'que_hacemos' %}">¿Qué hacemos?</a></li>
+        <li><a class="na" href="{% url 'donde_estamos' %}">¿Donde Estamos?</a></li>
+        <li><a class="na" href="{% url 'donacion' %}">Donar</a></li>
+        <li><a class="na" href="{% url 'voluntario' %}">Voluntario</a></li>
+        <li><a class="na" href="{% url 'opiniones' %}">Opiniones</a></li>
+      </ul>
+    </div><!-- /.nav-collapse -->
+  </nav><!-- /.navbar -->
+
+  <div class="rectangulo">
+    <h2>SOLIDARIDAD</h2>
+    <div class="redesSociales">
+      <a href="https://www.facebook.com/websolidaridad/" target="_blank"><img src="{% static 'imgs/LF.png' %}" alt=""></a>
+      <a href="https://www.instagram.com/solidaridadhonduras/?utm_source=ig_profile_share&igshid=acusmhpsdkd5" target="_blank"><img src="{% static 'imgs/LI.png' %}" alt="" ></a>
+      <a href="" target="_blank"><img src="{% static 'imgs/LT.png' %}" alt="" ></a>
+      <a href="" target="_blank"><img src="{% static 'imgs/LY.png' %}" alt="" ></a>
+      <a href="" target="_blank"><img src="{% static 'imgs/LIN.png' %}" alt=""></a>
+      <a href="" target="_blank"><img src="{% static 'imgs/LW.png' %}" alt="LogoWhatsapp" ></a>
+    </div>
+  </div>
+ 
+  {% block content_out %}
+  	
+  {% endblock content_out %}
+
+  	<div class="RedesS">
+      <div class="container">
+        <h3 style="color:#fff;">¡Comenta, Comparte y Familiarizate con nosotros!</h3>
+        <hr>
+        <a href="https://www.facebook.com/websolidaridad/" target="_blank"><img src="{% static 'imgs/LF.png' %}" id="f" alt=""></a>
+        <a href="https://www.instagram.com/solidaridadhonduras/?utm_source=ig_profile_share&igshid=acusmhpsdkd5" target="_blank"><img src="{% static 'imgs/LI.png' %}" alt="" ></a>
+      	<a href="" target="_blank"><img src="{% static 'imgs/LT.png' %}" alt="" ></a>
+      	<a href="" target="_blank"><img src="{% static 'imgs/LY.png' %}" alt="" ></a>
+      	<a href="" target="_blank"><img src="{% static 'imgs/LIN.png' %}" alt=""></a>
+      	<a href="" target="_blank"><img src="{% static 'imgs/LW.png' %}" alt="LogoWhatsapp" ></a>
+      </div>
+    </div>
+{% endblock contenido %}

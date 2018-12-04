@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
-from ong.models import Opiniones
+from ong.models import *
 from django.template.defaultfilters import timesince, linebreaks
 
 @minified_response
@@ -46,20 +46,35 @@ def log_out(request):
 	return HttpResponseRedirect(reverse('security:login_form'))
 
 @minified_response
-def diseno(request, id = 0):
-	if int(id) == 1:
-		return HttpResponseRedirect(reverse('security:login_form'))
-	else:
-		if not request.user.is_authenticated():
-			return HttpResponseRedirect(reverse('security:login_form'))
-		else:
-			return render(request, 'home.html')
+def que_somos(request):
+	return render(request, 'que_somos.html')
+
+@minified_response
+def quienes_somos(request):
+	preguntas = Preguntas_Frecuentes.objects.all()
+	return render(request, 'quienes_somos.html', {'preguntas': preguntas})
+
+@minified_response
+def donde_estamos(request):
+	return render(request, 'donde_estamos.html')
+
+@minified_response
+def donacion(request):
+	return render(request, 'donacion.html')
+
+@minified_response
+def que_hacemos(request):
+	return render(request, 'que_hacemos.html')
+
+@minified_response
+def voluntario(request):
+	return render (request, 'voluntario.html')
 
 @minified_response
 def opiniones(request):
 	opiniones = Opiniones.objects.order_by('-fecha_hora')
 	return render(request, 'opiniones_cliente.html', {'opiniones': opiniones})
-
+	
 @minified_response
 def opiniones_guardar(request):
 	if request.is_ajax():

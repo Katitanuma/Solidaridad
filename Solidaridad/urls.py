@@ -21,12 +21,16 @@ from seguridad import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^(?P<id>\d+)/$', views.diseno, name='diseno'),
-    url(r'^$', views.diseno, name='diseno'),
+    url(r'^$', views.quienes_somos, name='quienes_somos'),
+    url(r'^donde-estamos/$', views.donde_estamos, name='donde_estamos'),
+    url(r'^donacion/$', views.donacion, name='donacion'),
+    url(r'^que-hacemos/$', views.que_hacemos, name='que_hacemos'),
+    url(r'^voluntario/$', views.voluntario, name='voluntario'),
+    url(r'^opiniones/$', views.opiniones, name='opiniones'),
     url(r'^security/', include('seguridad.urls')),
     url(r'^application/', include('ong.urls')),
-     url(r'^opiniones$', views.opiniones, name='opiniones_cliente'),
-     url(r'^opiniones_guardar$', views.opiniones_guardar, name='opiniones_guardar'),
+    url(r'^opiniones$', views.opiniones, name='opiniones_cliente'),
+    url(r'^opiniones_guardar$', views.opiniones_guardar, name='opiniones_guardar'),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -84,6 +84,7 @@ th {
     font-weight: bold;
     font-size: 10px;
 }
+
 		@page {
 			size: letter landscape;
 			@frame header_frame {
@@ -105,8 +106,12 @@ th {
 </head>
 <body>
 	<div id="header_content">
-		<img src="{% static 'imgs/logo.png' %}" width="70px"alt="">
-		<h1 style="display:inline-block"> LISTADO DE EVENTOS</h1>
+		<h1>
+			
+			<img src="{% static 'imgs/logo.png' %}" width="70px"alt="">
+			<p id="titulo" style="display:inline-block"> LISTADO DE EVENTOS</p>
+		</h1>
+		
 	</div>
 	<div id="footer_content">
 		página <pdf:pagenumber> de <pdf:pagecount>	

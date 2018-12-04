@@ -357,7 +357,7 @@ def eventos(request):
 			e.estado = False
 			e.save()
 	form = EventoForm(initial={'usuario': request.user})
-	eventos = Evento.objects.order_by('fecha_Hora')
+	eventos = Evento.objects.order_by('-fecha_Hora')
 	return render(request, 'eventos.html', {'form': form, 'eventos': eventos})
 
 @minified_response

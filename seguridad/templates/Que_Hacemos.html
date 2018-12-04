@@ -1,0 +1,172 @@
+{% extends "base_out.html" %}
+{% block titulo %}Que Hacemos{% endblock  %}
+{% load static %}
+{% block content_out %}
+<div class="nav2">
+  <ul id="Nav3" class="menuS">
+    <li><a href="#CNS-Letrinas"><strong>CNS-Letrinas</strong></a></li>
+    <li><a href="#CNS-Becas"><strong>CNS-Becas</strong></a></li>
+    <li><a href="#CNS-Huertos-Familiares"><strong>CNS-Huertos Familiares</strong></a></li>
+    <li><a href="#CNS-Cajas-Rurales"><strong>CNS-Cajas Rurales</strong></a></li>
+    <li><a href="#CNS-Pisos"><strong>CNS- Pisos</strong></a></li>
+  </ul>
+</div>
+  <ul class="nav3">
+    <li><p><strong class="etiquetaQ1"></strong></p><a class="Q1" href="#CNS-Letrinas"></a></li>
+    <li><p><strong class="etiquetaQ2"></strong></p><a class="Q2" href="#CNS-Becas"></a></li>
+    <li><p><strong class="etiquetaQ3"></strong></p><a class="Q3" href="#CNS-Huertos-Familiares"></a></li>
+    <li><p><strong class="etiquetaQ4"></strong></p><a class="Q4" href="#CNS-Cajas-Rurales"></a></li>
+    <li><p><strong class="etiquetaQ5"></strong></p><a class="Q5" href="#CNS-Pisos"></a></li>
+  </ul>
+  
+  <div id="CNS-Letrinas" class="jumbotron CNSL">
+    <h1 id="TCNSL"><strong>CNS-LETRINAS</strong></h1>
+    <br>
+    <div class="col-md-7">
+      <br>
+      <br>
+      <ul class="ULCNSL">
+        <p align="justify">
+          91 letrinas instaladas
+        </p>
+        <p align="justify">216 personas beneficiadas en la Montaña del Izopo</p>
+        <p align="justify">
+          Contratación de mano de obra local para la construcción, fomentando la economía de la montaña
+        </p>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <div id="ICNSL" class="ih-item square effect3 bottom_to_top"><a href="#">
+        <div class="img">
+          <img src="{% static 'imgs/CNSR.png' %}" alt="img"></div>
+        <div class="info">
+          <h3>Proyecto Letrina</h3>
+          <p>Familia beneficiada en la Montaña del Izopo</p>
+        </div></a></div>
+    </div>
+  </div>
+  
+  <div id="CNS-Becas" class="jumbotron">
+    <h1 id="TCNSL">CNS-Becas</h1>
+    <br>
+    <div class="col-md-7">
+      <br><br><br><br><br><br>
+      <ul class="ULCNSL">
+        <p align="justify">
+          20 estudiantes, 4 de ellos estudiando en la Universidad Nacional Autónoma de Honduras, los demás distribuidos en colegios en Santa Ana y San Buenaventura
+        </p>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <br><br>
+      <div id="ICNSB" class="ih-item square effect3 bottom_to_top"><a href="#">
+        <div class="img">
+          <img  src="{% static 'imgs/ICNSB.png' %}" alt="img"></div>
+        <div class="info">
+          <h3>Rosita,</h3>
+          <p>Becaria en segundo año de enfermería</p>
+        </div></a></div>
+    </div>
+  </div>
+
+  <div id="CNS-Huertos-Familiares" class="jumbotron">
+    <h1 id="TCNSL">CNS-Huertos Familiares</h1>
+    <br>
+    <div class="col-md-6">
+      <br>
+      <ul class="ULCNSL">
+        <p align="justify">
+          95 huertos familiares instalados
+        </p>
+        <br>
+        <div id="ICNSHF1" class="ih-item square effect3 bottom_to_top">
+        <a href="#">
+          <div class="img">
+            <img id="IMGHF1" src="{% static 'imgs/CNSHF1.png' %}" alt="img"></div>
+          <div class="info">
+            <h3>Ama de Casa,</h3>
+            <p>Beneficiada por el proyecto de HUERTO FAMILIAR</p>
+          </div>
+        </a>
+      </div>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <br><br><br><br>
+      <br><br>
+      <div id="ICNSHF2" class="ih-item square effect3 bottom_to_top">
+        <a href="#">
+          <div class="img">
+            <img id="IMGHF2" src="{% static 'imgs/CNSHF2.jpg' %}" alt="img"></div>
+          <div class="info">
+            <h3>Resultados del Proyecto</h3>
+            <p>Productos recolectados de los huertos realizados</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="CNS-Cajas-Rurales" class="jumbotron">
+    <h1 id="TCNSL">CNS-Cajas Rurales</h1>
+    <br>
+    <div class="col-md-7">
+      <br><br><br><br>
+      <ul class="ULCNSL">
+        <p align="justify">
+          5 Cajas Rurales Instaladas en la Comunidad 
+        </p>
+        <p align="justify">Operadas al 100% por la Comunidad</p>
+        <p align="justify">
+          Ahorros sobrepasan los préstamos.
+        </p>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <br><br><br>
+      <div id="ICNSHF1" class="ih-item square effect3 bottom_to_top"><a href="#">
+        <div class="img">
+          <img src="{% static 'imgs/CNSCR.png' %}" alt="img"></div>
+        <div class="info">
+          <h3>Proyecto de Piso</h3>
+          <p>Integrantes en ejecucion de proyecto</p>
+        </div></a></div>
+    </div>
+  </div>
+
+  <div id="CNS-Pisos" class="jumbotron">
+    <h1 id="TCNSL">CNS-Pisos</h1>
+    <br>
+    <ul class="ULCNSL">
+        <p align="justify">
+          Construimos pisos para las casas, la mano de obra la pone la comunidad, los materiales los donan voluntarios
+        </p>
+    </ul>   
+    <div class="col-md-6">
+      <br>  
+      <div id="ICNSB1" class="ih-item square effect3 bottom_to_top">
+        <a href="#">
+          <div class="img">
+            <img id="IMGHF1" src="{% static 'imgs/CNSP.png' %}" alt="img"></div>
+          <div class="info">
+            <h3>Voluntarios</h3>
+            <p>Equipo de voluntarios trabajando para la culminación de una etapas</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <br>
+      <div id="ICNSB2" class="ih-item square effect3 bottom_to_top">
+        <a href="#">
+          <div class="img">
+            <img id="IMGHF2" src="{% static 'imgs/CNSP2.jpg' %}" alt="img"></div>
+          <div class="info">
+            <h3>Realizacion de Codaleado</h3>
+            <p>Terminando el proceso de Embaldozado</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock content_out %}

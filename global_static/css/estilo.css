@@ -1,0 +1,1577 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+body{
+  position:relative;
+}
+h1{
+ font-family:"Dosis";
+}
+
+/*======================NAV2=================*/
+.nav2{
+  width: 100%;
+  height: 70px;
+}
+
+.rectangulo{
+  background: #E5E2E2; 
+  margin-top:33px; 
+  height:100px; 
+  padding-top: 5px;
+}
+.rectangulo ul{
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+.rectangulo h2{
+  display:inline-block; 
+  margin-top: 25px;
+  margin-left:30px; 
+  font-family: Dosis; 
+  font-size: 27pt;
+}
+
+.redesSociales{
+  display: inline-block;
+  margin-left:780px; 
+}
+.redesSociales img{
+  height: 50px;
+}
+
+nav.navbar {
+    background-color: #374763;
+    width: 100%;
+}
+
+.menuS{
+  margin-top: 10px;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+
+}
+
+.menuS li{
+  color: #7B7979;
+  margin: 5px;
+  display: inline-block;
+  font-size: 14pt;
+}
+.menuS li a{
+  color: #000;
+  margin: 5px;
+  display: inline-block;
+  font-size: 16pt;
+  font-family:Dosis; 
+}
+
+.na{
+  height: 50px;
+  color:#FFFFFF;
+  border-radius: 3px;
+  font-family:"Dosis",verdana, arial;
+  font-size:13pt;  
+}
+
+.nav3 li{
+  list-style: none;
+}
+
+.etiqueta1{
+  position: fixed;
+  margin-left:92%;
+  margin-top: 86px;
+  z-index: 1;
+  font-size: 13pt;
+  font-family: "Dosis";
+}
+
+.etiqueta2{
+  position: fixed;
+  margin-left:90%;
+  margin-top: 113px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+.etiqueta3{
+  position: fixed;
+  margin-left:86%;
+  margin-top: 144px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiqueta4{
+  position: fixed;
+  margin-left:89%;
+  margin-top: 175px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiqueta5{
+  position: fixed;
+  margin-left:84%;
+  margin-top: 205px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+
+.etiquetaQ1{
+  position: fixed;
+  margin-left:88%;
+  margin-top: 86px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQ2{
+  position: fixed;
+  margin-left:89%;
+  margin-top: 113px;
+  z-index: 1;
+  font-family: "Dosis"; 
+  font-size: 13pt;
+}
+.etiquetaQ3{
+  position: fixed;
+  margin-left:83%;
+  margin-top: 144px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQ4{
+  position: fixed;
+  margin-left:85%;
+  margin-top: 175px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQ5{
+  position: fixed;
+  margin-left:89%;
+  margin-top: 205px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQS1{
+  position: fixed;
+  margin-left:87%;
+  margin-top: 86px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQS2{
+  position: fixed;
+  margin-left:90%;
+  margin-top: 113px;
+  z-index: 1;
+  font-family: "Dosis"; 
+  font-size: 13pt;
+}
+.etiquetaQS3{
+  position: fixed;
+  margin-left:90%;
+  margin-top: 144px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQS4{
+  position: fixed;
+  margin-left:83%;
+  margin-top: 175px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaQS5{
+  position: fixed;
+  margin-left:83%;
+  margin-top: 205px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+.etiquetaV1{
+  position: fixed;
+  margin-left:84%;
+  margin-top: 86px;
+  z-index: 1;
+  font-family: "Dosis";
+  font-size: 13pt;
+}
+
+.etiquetaV2{
+  position: fixed;
+  margin-left:89%;
+  margin-top: 113px;
+  z-index: 1;
+  font-family: "Dosis"; 
+  font-size: 13pt;
+}
+.o1, .o2, .o3, .o4, .o5, .Q1, .Q2, .Q3, .Q4, .Q5, .V1, .V2, .QS1, .QS2, .QS3, .QS4, .QS5{
+  margin-top: 90px;
+  margin-left:95%;
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 100%;
+  position: fixed;
+}
+
+.o2,.Q2, .V2, .QS2{
+  margin-top: 120px;
+}
+
+.o3, .Q3, .QS3{
+  margin-top: 150px;
+}
+.o4, .Q4, .QS4{
+  margin-top: 180px;
+}
+
+.o5, .Q5, .QS5{
+  margin-top: 210px;
+}
+/*==================================== Redes Sociales ========================*/
+.RedesS{
+  width: 100%;
+  height: 200px;
+  background: black;
+  padding-top: 20px;
+}
+
+#f{
+  margin-left: 140px;
+}
+
+.RedesS img{
+  height: 80px; 
+  margin-right: 60px;
+}
+
+/*==================================== Pagina Quienes Somos========================*/
+
+/*===========================================Carta=================================*/
+
+.CartaP{
+  background: url("../imgs/fondoMision.png");
+  height: 730px;
+  vertical-align: middle;
+  padding-top: 20px;
+}
+
+.DivCP{
+  display: inline-block; 
+  width: 69%;
+  margin-top: -5px;
+  margin-left: 10px;
+  height: 700px;
+  text-align: center;
+  padding:50px;
+  background: rgba(251,251,251,.91);
+  box-shadow: 5px 5px 15px;
+  border-radius: 30px;
+}
+
+.DivCP p{
+  font-size: 14pt;
+  font-family: Arial;
+}
+
+.TitCP{
+  text-align: center;
+  font-size: 34pt;
+  color:black;
+}
+
+.TextoCP{
+  font-size: 22pt;
+  font-family: Arial;
+  font-style: italic;
+}
+
+.TextoCP{
+  color:black;
+}
+
+
+/*==============================VALORES==========================*/
+
+.DivPR{
+  display: inline-block; 
+  width: 99%;
+  height: 700px;
+  text-align: center;
+  padding:50px;
+}
+
+.Premios{
+  background: url("../imgs/fondoValores.jpeg");
+  background-size: 100% 100%;
+  height: 730px;
+  vertical-align: middle;
+  padding-top: 20px;
+}
+
+.TitPR{
+  text-align: center;
+  font-size: 34pt;
+  color:white;
+}
+
+.TextoPR{
+  font-size: 22pt;
+  font-family: Arial;
+  font-style: italic;
+  color:black;
+}
+
+/* ===================================CARDS=========================*/
+
+/*============================CARD 1 ==============================*/
+
+.CARD1{
+  
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD1 .Front1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front1 img{
+  width: 100%;
+  height: 100%;
+}
+
+.CARD1:Hover .Front1{
+  transform: rotateX(-180deg);
+}
+.CARD1 .Back1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+}
+.Back1 h1{
+  color:white;
+}
+
+.Back1 p{
+  color:white;
+}
+
+
+.CARD1:Hover .Back1{
+  transform: rotateX(0deg);
+}
+
+/*=====================card2===================*/
+
+.CARD2{
+  
+  margin-top: -24.5%;
+  margin-left: 36%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD2 .Front2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front2 img{
+  width: 100%;
+  height: 100%;
+}
+
+.CARD2:Hover .Front2{
+  transform: rotateX(-180deg);
+}
+.CARD2 .Back2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+}
+.Back2 h1{
+  color:white;
+}
+
+.Back2 p{
+  color:white;
+}
+
+
+.CARD2:Hover .Back2{
+  transform: rotateX(0deg);
+}
+
+/*=====================card3===================*/
+
+.CARD3{
+  margin-top: -24.5%;
+  margin-left: 62%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD3 .Front3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front3 img{
+  width: 100%;
+}
+
+.CARD3:hover .Front3{
+  transform: rotateX(-180deg);
+}
+.CARD3 .Back3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+}
+.Back3 h1{
+  color:white;
+}
+
+.Back3 p{
+  color:white;
+}
+
+
+.CARD3:hover .Back3{
+  transform: rotateX(0deg);
+}
+
+/*=====================card4===================*/
+
+.CARD4{
+  
+  margin-top: -24.5%;
+  margin-left: 88%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD4 .Front4{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front4 img{
+  width: 100%;
+}
+
+.CARD4:Hover .Front4{
+  transform: rotateX(-180deg);
+}
+.CARD4 .Back4{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+}
+.Back4 h1{
+  color:white;
+}
+
+.Back4 p{
+  color:white;
+}
+
+
+.CARD4:Hover .Back4{
+  transform: rotateX(0deg);
+}
+
+/* ==================================Presentacion institucional=========================== */
+.carousel-inner{
+  width: 100%;
+  height: 650px;
+}
+
+.item img{
+  width: 100%;
+}
+
+.carousel-caption{
+  height: 300px;
+}
+
+#Caption3{
+  height: 210px;
+}
+/* ==================================Reporte Anual=========================== */
+
+.Reporte{
+  background:#ABABAB;
+  background-size: 100% 100%;
+  height: 730px;
+  vertical-align: middle;
+  padding-top: 80px;
+}
+
+.DivRP{
+  display: inline-block; 
+  width: 99%;
+  height: 730px;
+  text-align: center;
+  padding:50px;
+  margin-top: -80px;
+  
+}
+
+.TitRP{
+  color: white;
+  text-align: center;
+  font-size: 34pt;
+}
+
+.TextoRP{
+  font-size: 22pt;
+  font-family: Arial;
+  font-style: italic;
+}
+
+.Fam{
+  display: inline-block;
+  margin-left: 30px;
+  width: 30%;
+}
+.Fam img{
+  width: 100px;
+}
+
+.Fam h2, h3{
+  color:white;
+}
+
+.Reporte a{
+  height: 50px;
+  margin-top: 5%;
+  margin-left: -74%;
+}
+
+.descargar img{
+  width: 40px;
+}
+
+.TitExp{
+  color:#fff; 
+  text-align: center;
+  font-size: 34pt;
+  margin-top: 20px;
+}
+
+.TC{
+  font-size: 14pt;
+}
+
+.CUADRO{
+  height: 130px;
+  width: 230px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#RCI, #RCI2{
+  width: 250px;
+  vertical-align: middle;
+}
+
+#RCI2{
+  margin-left: -15px !important;
+}
+
+#Prog{
+  color:white;
+  font-family:"Dosis";
+  font-size: 48pt;
+
+}
+
+#C1{
+  background: url("../imgs/R1.png");
+}
+#C2{
+  background: url("../imgs/R2.png");
+}
+#C3{
+  background: url("../imgs/R4.png");
+}
+#C4{
+  background: url("../imgs/R3.png");
+  background-size:cover;
+}
+
+#T1{
+  background: #35b729;
+}
+
+#T2{
+  background: #ff5c5c;
+}
+
+#T3{
+  background: #b75fe6;
+}
+
+#T4{
+  background: #56dcf1;
+  padding: 5px;
+
+}
+
+#RCT{
+  font-family: "Dosis";
+}
+
+#RCI, #RCI2{
+  font-family: "Dosis";
+}
+/* ==================================Reporte Anual=========================== */
+
+.preguntas{
+  padding:40px;
+  background:#DADADA;
+  height: 730px;
+  vertical-align: middle;
+}
+
+.preguntas h1{
+  text-align: center;
+}
+
+.preguntas p{
+  padding: 10px 50px;
+}
+
+
+.panel-group{
+  margin-bottom: -1px;
+}
+
+/*==================================== Pagina Que Hacemos ==========================*/
+#TCNSL{
+  text-align: center;
+  color: white;
+}
+
+.CNSL{
+  background: #58A7C4;
+  color: black;
+}
+
+#ICNSL{
+  height: 415px;
+}
+
+#ICNSB{
+  height: 350px;
+}
+#ICNSHF1, #ICNSHF2, #ICNSB1, #ICNSB2{
+  width: 500px;
+  height: 300px;
+}
+
+#ICNSB1{
+ margin-left: 120px;
+}
+
+
+#IMGHF2{
+  width: 500px;
+  height: 300px;
+}
+
+#IMGHF1{
+  width: 546px;
+  height: 333px;
+  margin-top: -17px;
+  margin-left: -20px;
+}
+.ULCNSL p{
+  font-size: 20pt;
+  font-family: 'Arial';
+  padding: 14px 45px;
+  list-style: none;
+}
+/*==================================== Pagina Donde Estamos ========================*/
+
+
+.mapa{
+  padding-top: 40px;
+  height: 720px;
+  background: #FFFFFF;
+}
+
+.Map{   /*Mapa grande*/
+  height: 580px;
+}
+
+
+.marq{
+  position: absolute;
+  margin-left: 536px;
+  margin-top: 265px;
+  height: 50px;
+}
+.marq2{
+  position: absolute;
+  margin-left: 330px;
+  margin-top: 315px;
+}
+
+.marq3{
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 280px;
+}
+.marq img, .marq2 img,.marq3 img{
+  height: 50px;
+}
+
+.Choluteca{
+  margin-top: 372px;
+  margin-left: 493px;
+  position: absolute;
+}
+
+.Paraiso{
+  margin-top: 313px;
+  margin-left: 530px;
+  position: absolute;
+}
+
+.Valle{
+  margin-top: 350px;
+  margin-left: 445px;
+  position: absolute;
+}
+
+.FcoMorazan{
+  margin-top:230px;
+  margin-left: 488px;
+  position: absolute;
+}
+
+.LaPaz{
+  margin-top:282px;
+  margin-left: 400px;
+  position: absolute;
+}
+
+.Comayagua{
+  margin-top:223px;
+  margin-left: 432px;
+  position: absolute;
+}
+
+.Olancho{
+  margin-top:152px;
+  margin-left: 578px;
+  position: absolute;
+}
+
+.Yoro{
+  margin-top:139px;
+  margin-left: 450px;
+  position: absolute;
+}
+.Atlantida{
+  margin-top:92px;
+  margin-left: 449px;
+  position: absolute;
+}
+.Colon{
+  margin-top:81px;
+  margin-left: 630px;
+  position: absolute;
+}
+
+.Cortes{
+  margin-top:99px;
+  margin-left: 369px;
+  position: absolute;
+}
+
+.GraciasaDios{
+  margin-top:80px;
+  margin-left: 824px;
+  position: absolute;
+}
+
+.Lempira{
+  margin-top:235px;
+  margin-left: 298px;
+  position: absolute;
+}
+
+.Intibuca{
+  margin-top:262px;
+  margin-left: 359px;
+  position: absolute;
+}
+
+.SantaBarbara{
+  margin-top:146px;
+  margin-left: 327px;
+  position: absolute;
+}
+
+.Copan{
+  margin-top:175px;
+  margin-left: 255px;
+  position: absolute;
+}
+
+.Ocotepeque{
+  margin-top:232px;
+  margin-left: 236px;
+  position: absolute;
+}
+
+.Isla{
+  margin-top:12px;
+  margin-left: 524px;
+  position: absolute;
+}
+
+
+.Choluteca:hover, .Valle:hover, .Paraiso:hover, .FcoMorazan:hover, .LaPaz:hover, .Comayagua:hover, 
+.Olancho:hover, .Yoro:hover, .Colon:hover, .GraciasaDios:hover, .Cortes:hover, .Atlantida:hover, 
+.Lempira:hover, .Intibuca:hover, .SantaBarbara:hover, .Copan:hover, .Ocotepeque:hover, .Isla:hover{
+  transform: scale(1.3);
+  position: relative;
+    transition: 1s ease;
+    z-index: 1;
+}
+
+.TitExp{
+  color:#0025FF;
+}
+
+
+.DCholuteca, .DFcoMorazan, .DComayagua{
+  padding: 40px;
+}
+
+.jumbotron{
+  height: 653px;
+  margin-bottom: 1px;
+}
+
+.CHDatos{
+  width: 47.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.DCholuteca h1, .DFcoMorazan h1, .DComayagua h1{
+  text-align: center;
+}
+
+.DCholuteca h3, .DFcoMorazan h3, .DComayagua h3{
+  color: black;
+}
+
+.ChImagen{
+  margin-left: 1%;
+  width: 51%;
+  display: inline-block;
+}
+.ih-item.square.effect4{
+height: 180px;
+}
+
+.ImagenCH{
+  display: inline-block;
+}
+
+#IMG1{
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+#IMG2{
+  width: 40%;
+   margin-bottom: 20px;
+}
+
+#IMG3{
+  width: 45%;
+}
+
+#IMG4{
+  width: 45%;
+}
+
+
+.mapaImage{
+  margin-top: -40px;
+  text-align: center;
+}
+.snip1566 {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  max-width: 190px;
+  width: 100%;
+  color: #bbb;
+  font-size: 16px;
+  box-shadow: none !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.snip1566 *,
+.snip1566:before,
+.snip1566:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.snip1566:before,
+.snip1566:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  border: 2px solid #bbb;
+  border-color: transparent #bbb;
+}
+
+.snip1566 img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.snip1566 figcaption {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+}
+
+.snip1566 i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  z-index: 1;
+}
+
+.snip1566 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1566:hover figcaption,
+.snip1566.hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.snip1566:hover:before,
+.snip1566.hover:before,
+.snip1566:hover:after,
+.snip1566.hover:after {
+  border-width: 10px;
+}
+
+.snip1566:hover:before,
+.snip1566.hover:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.snip1566:hover:after,
+.snip1566.hover:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+/*=========================================Pagina Donacion=================================*/
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-size: 14pt;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  margin-bottom: 40px;
+  margin-left: 900px;
+ }
+
+.cuentas{
+  background: white;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  height: 55px;
+  width: 100%;
+  top: 623px;
+  text-align: center;
+
+}
+
+.c1{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.imgC{
+  height: 50px;
+  margin-right: 5px;
+
+}
+.cuentas h4{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.TextD{
+  font-size: 15pt;
+}
+/*====================================Pagina Voluntarios===========================================*/
+.CARD5{
+  
+  margin-top: 18%;
+  margin-left: 17%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD5 .Front5{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front5 img{
+  width: 100%;
+  height: 100%;
+}
+
+.Back5 h1{
+  color:#000;
+  font-size: 30pt;
+}
+
+.Back5 p{
+  color:#000;
+  font-size: 14pt;
+}
+
+
+.CARD6{
+  margin-top: -26%;
+  margin-left: 47%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD6 .Front6{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front6 img{
+  width: 100%;
+  height: 100%;
+}
+
+.Back6 h1{
+  color:#000;
+  font-size: 30pt;
+}
+
+.Back6 p{
+  color:#000;
+  font-size: 14pt;
+}
+
+
+.CARD7{
+  margin-top: -26%;
+  margin-left: 77%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.CARD7 .Front7{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.Front7 img{
+  width: 100%;
+  height: 100%;
+}
+
+.Back7 h1{
+  color:#000;
+  font-size: 30pt;
+}
+
+.Back7 p{
+  color:#000;
+  font-size: 14pt;
+}
+
+.TVo{
+  font-size: 18pt!important;
+  text-align: center;
+}
+
+.caracteristicas{
+  font-size: 12pt;
+  padding: 30px;
+}
+
+.itemsG{
+  margin-left: 40px;
+  font-size: 12pt;
+  margin-top: -30px;
+  padding: 0px 30px;
+}
+
+.modal-title{
+  text-align: center;
+}
+/*=================================== MEDIAS QUERIES===============================================*/
+
+@media screen and (max-width: 1350px){
+  .redesSociales{
+     margin-left: 740px;
+  }
+
+  .menuS{
+    margin-left: -20px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .redesSociales{
+     margin-left: 630px;
+  }
+
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    width: 250px;
+    height: 250px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-23.5%;
+  }
+
+  .Reporte{
+    margin-top: -28px;
+    padding-top: 20px;
+  }
+
+  .Fam h2{
+    font-size: 20pt;
+  }
+
+  .carousel-indicators{
+    height: 40px;
+  }
+}
+
+
+@media screen and (max-width: 1280px){
+ 
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    width: 250px;
+    height: 250px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-21.5%;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+   .menuS li a{
+    font-size: 13pt;
+  } 
+  
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    width: 220px;
+    height: 220px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-24.5%;
+  }
+
+  .redesSociales{
+    margin-left: 480px;
+  }
+
+  .Reporte{
+    margin-top: -128px;
+    padding-top: 40px;
+  }
+
+  #izq, #der{
+    height: 530px;
+  }
+
+  .carousel-indicators{
+    height: 130px;
+  }
+
+  .Fam img{
+    width: 80px;
+  }
+
+  .Fam{
+    width: 33%;
+  }
+  
+  .DivRP{
+    text-align: center;
+    padding: 5px 10px;
+  }
+
+  #descarga{
+    margin-top: 10px;
+  }
+
+  #f{
+    margin-left: 110px;
+  }
+
+  #descarga{
+    margin-left: -530px;
+    margin-top: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 823px){
+  .CartaP{
+    margin-top: -70px;
+  }
+  .redesSociales{
+    margin-left: 280px;
+  }
+  .menuS{
+   display: none;
+  }
+
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    margin-top: 180px;
+    width: 175px;
+    height: 175px;
+    margin-right: 10px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-24.9%;
+  }
+
+  #izq, #der{
+    height: 425px;
+  }
+
+  .carousel-indicators{
+    height: 230px;
+  }
+
+  .Reporte{
+    margin-top: -228px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .DivRP{
+    width: 780px;
+  }
+
+  .Fam{
+    width: 45%;
+  }
+  
+  #descarga{
+    margin-left: -430px;
+    margin-top: 30px;
+  }
+  
+  .RedesS img{
+    height:60px;
+    margin-right: 35px;
+  }
+
+  #Logo{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 812px){
+  #Logo{
+    display: none;
+  }
+
+  .redesSociales{
+    margin-left: 280px;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .redesSociales{
+    margin-left: 200px;
+  }
+  
+  #Logo{
+    display: none;
+  }
+
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    margin-top: 120px;
+    width: 160px;
+    height: 160px;
+    margin-right: 10px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-24.9%;
+  }
+  
+  .Fam{
+    width: 45%;
+  }
+
+  .DivRP{
+    width: 730px;
+  }
+
+  .Reporte{
+    margin-top: -255px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  #izq, #der{
+    height: 397px;
+  }
+
+  .carousel-indicators{
+    height: 255px;
+  }
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 740px){
+  .redesSociales{
+    margin-left: 150px;
+  }
+  
+  #Logo{
+    display: none;
+  }
+}
+@media screen and (max-width: 684px){
+  .redesSociales{
+    margin-left: 100px;
+  }
+  
+  #Logo{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px){
+  .redesSociales{
+    display: none;
+  }
+  
+  #Logo{
+    display: none;
+  }
+
+  .rectangulo{
+    text-align: center;  
+  }
+
+  .rectangulo h2{
+    margin-top: 35px;
+  }
+
+}
+
+

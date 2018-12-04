@@ -1,0 +1,1 @@
+;$(function(){$('.rectangulo').hide();});

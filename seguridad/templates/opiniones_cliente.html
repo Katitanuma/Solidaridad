@@ -1,6 +1,10 @@
 {% extends "base_out.html" %}
-
-{% block contenido %}
+{% block titulo %}Quienes Somos{% endblock  %}
+{% load static %}
+{% block content_out%}
+<div class="container">
+	<br>
+	<h1>Comparte tu Opinion</h1>
 	<br>
 	<div class="row">
 		<div class="col-md-12">
@@ -19,9 +23,9 @@
 				</div>
 			{% endfor %}
 		</div>
-	
+</div>
 
-{% endblock contenido %}
+{% endblock %}
 
 {% block script %}
 	<script>

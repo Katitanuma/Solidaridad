@@ -158,9 +158,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" alt=""></span> Reportes<span class="caret"></span></a>
 						<ul class="dropdown-menu" style="font-size:15px">
-							<li><a href="{% url 'app:voluntarios_pdf' %}"><span class="glyphicon glyphicon-user"></span>
+							<li><a href="{% url 'app:voluntarios_pdf' %}" target="_blank"><span class="glyphicon glyphicon-user"></span>
 						Voluntarios </a></li></li>
-						<li><a href="{% url 'app:eventos_pdf' %}"><span class="glyphicon glyphicon-calendar"></span>
+						<li><a  target="_blank" href="{% url 'app:eventos_pdf' %}"><span class="glyphicon glyphicon-calendar"></span>
 					Eventos </a></li></li>
 				
 	</ul>
@@ -229,7 +229,10 @@ Gráfico 5 </a></li></li>
 <div class="main-content">
 <!-- <h1> I am the main content </h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p> -->
-{% block contenidoApp %}
+<div class="container">
+	{% block contenidoApp %}
 {% endblock contenidoApp %}
+</div>	
+
 </div>
 {% endblock contenido %}

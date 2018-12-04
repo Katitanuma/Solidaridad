@@ -1,0 +1,315 @@
+{% extends "base_out.html" %}
+{% block titulo %}Donde Estamos{% endblock  %}
+{% load static %}
+{% block content_out %}
+<div class="nav2">
+  <ul class="menuS">
+    <li><a href="#Extension"><strong>Mapa</strong></a></li>
+    <li><a href="#Choluteca"><strong>Choluteca</strong></a></li>
+    <li><a href="#FranciscoMorazan"><strong>Francisco Morazan</strong></a></li>
+    <li><a href="#Comayagua"><strong>Comayagua </strong></a></li>
+    <li><a href="#ProximasExtenciones"><strong>Proximas Extensiones</strong></a></li>
+  </ul>
+</div>
+  <ul class="nav3">
+    <li><p class="etiqueta1"></p><a class="o1" href="#Extension"></a></li>
+    <li><p class="etiqueta2"></p><a class="o2" href="#Choluteca"></a></li>
+    <li><p class="etiqueta3"></p><a class="o3" href="#FranciscoMorazan"></a></li>
+    <li><p class="etiqueta4"></p><a class="o4" href="#Comayagua"></a></li>
+    <li><p class="etiqueta5"></p><a class="o5" href="#ProximasExtenciones"></a></li>
+  </ul>
+  <div id="Extension" class="mapa">
+    <h2 class="TitExp">Nuestra Expansión</h2>
+    <br>
+    
+    <!--<a class="marq2" data-toggle="modal" data-target="#myModal"><img src="{% static 'img/marquer.png' %}" alt=""></a>
+    <a class="marq3" data-toggle="modal" data-target="#myModal2"><img src="{% static 'img/marquer.png' %}" alt=""></a>
+    <img class="Map" src="{% static 'img/EXTMP.png' %}" alt="">-->
+    
+    <img id="FM" style="position: absolute" class="FcoMorazan" src="{% static 'imgs/fm.png' %}" alt="">
+    <img style="position: absolute" class="Olancho PE" src="{% static 'imgs/olancho.png' %}" alt="">
+    <img style="position: absolute" class="Paraiso PE"  src="{% static 'imgs/paraiso.png' %}" alt="">
+    <img id="CH" style="position: absolute" class="Choluteca" src="{% static 'imgs/choluteca.png' %}" alt="">
+    <img style="position: absolute" class="SantaBarbara PE" src="{% static 'imgs/SantaBarbara.png' %}" alt="">
+    <img style="position: absolute" class="Cortes PE" src="{% static 'imgs/Cortes.png' %}" alt="">
+    <img style="position: absolute" class="Atlantida PE" src="{% static 'imgs/Atlantida.png' %}" alt="">
+    <img style="position: absolute" class="Yoro PE" src="{% static 'imgs/yoro.png' %}" alt="">
+    <img style="position: absolute" class="Colon PE" src="{% static 'imgs/colon.png' %}" alt="">
+    <img style="position: absolute" class="GraciasaDios PE" src="{% static 'imgs/GraciasaDios.png' %}" alt="">
+    <img style="position: absolute" class="Copan PE" src="{% static 'imgs/copan.png' %}" alt="">
+    <img style="position: absolute" class="Ocotepeque PE" src="{% static 'imgs/ocotepeque.png' %}" alt="">
+    <img style="position: absolute" class="Lempira PE" src="{% static 'imgs/lempira.png' %}" alt="">
+    <img style="position: absolute" class="Intibuca PE" src="{% static 'imgs/intibuca.png' %}" alt="">
+    <img style="position: absolute" class="LaPaz PE" src="{% static 'imgs/lapaz.png' %}" alt="">
+    <img style="position: absolute" class="Isla PE" src="{% static 'imgs/islas.png' %}" alt="">
+    <img id="CO" style="position: absolute" class="Comayagua" src="{% static 'imgs/comayagua.png' %}" alt="">
+    <img style="position: absolute" class="Valle PE" src="{% static 'imgs/valle.png' %}" alt="">
+  </div>
+  <div class="mapaImage">
+    <figure class="snip1566">
+      <img src="{% static 'imgs/IC1.jpg' %}" />
+      <figcaption><i class="ion-android-add"></i></figcaption>
+      
+    </figure>
+    <figure class="snip1566"><img src="{% static 'imgs/IC2.jpg' %}" alt="sq-sample17" />
+      <figcaption><i class="ion-android-open"></i></figcaption>
+      
+    </figure>
+    <figure class="snip1566"><img src="{% static 'imgs/IC3.jpg' %}" alt="sq-sample19" />
+      <figcaption><i class="ion-android-star-outline"></i></figcaption>
+      
+    </figure>
+    <figure class="snip1566"><img src="{% static 'imgs/IC4.jpg' %}" alt="sq-sample20" />
+      <figcaption><i class="ion-android-stopwatch"></i></figcaption>
+    </figure>
+  </div>
+
+  <div id="Choluteca" class="jumbotron">
+    <article class="DCholuteca">
+      <h1>CHOLUTECA</h1>
+      <section class="CHDatos">
+        <h3>Coordinador: <strong>Victor M. Marcia</strong></h3>
+        <h3>Actividades</h3>
+        <ul>
+          <li>Celebracion dia del niño "EL CARACOL"</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugit libero a, possimus quidem placeat, error nemo, accusamus voluptatum ullam voluptatem impedit sed ab vero sequi totam perspiciatis odit doloribus!</p>
+      </section>
+      
+      <section class="ChImagen">
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img  src="{% static 'imgs/CH2.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Escuela Dionisio de Herrera</h3>
+            <p>Comunidad de "El Caracol"</p>
+          </div>
+          </a>
+        </div>
+      
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH3.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Integrantes de Solidaridad</h3>
+            <p>Srita. Stephanie Fonseca e Ing. Victor Marcia </p>
+          </div>
+          </a>
+        </div>
+
+        <div  class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH4.jpg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Alumnos de la institución educativa</h3>
+            <p>Alumnos beneficiados por la celebracion del Día del Niño en su Escuela</p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH5.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Actividad de Reventar Piñata</h3>
+            <p>Los alumnos muy alegres por el momento grato que se vive</p>
+          </div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+  <div id="FranciscoMorazan" class="jumbotron">
+    <article  class="DFcoMorazan">
+      <h1>Francisco Morazán </h1>
+      <br>
+      <section class="CHDatos">
+        <h3>Coordinador: <strong>Victor M. Marcia</strong></h3>
+        <br>
+        <h3>Actividades</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugit libero a, possimus quidem placeat, error nemo, accusamus voluptatum ullam voluptatem impedit sed ab vero sequi totam perspiciatis odit doloribus!</p>
+      </section>
+
+      <section class="ChImagen">
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img  src="{% static 'imgs/CH2.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+      
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH3.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+        
+        <div  class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH4.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="ih-item square effect4 ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH5.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+  
+  <div id="Comayagua" class="jumbotron">
+    <article  class="DComayagua">
+      <h1>Comayagua</h1>
+      <br>
+      <section class="CHDatos">
+        <h3>Coordinador: <strong>Victor M. Marcia</strong></h3>
+        <br>
+        <h3>Actividades</h3>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugit libero a, possimus quidem placeat, error nemo, accusamus voluptatum ullam voluptatem impedit sed ab vero sequi totam perspiciatis odit doloribus!</p>
+      </section>
+
+      <section class="ChImagen">
+        <div class="ih-item square effect6 from_left_and_right ImagenCH"><a href="#">
+          <div class="img"><img  src="{% static 'imgs/CH2.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+      
+        <div class="ih-item square effect6 from_left_and_right ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH3.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+        
+        <div  class="ih-item square effect6 from_left_and_right ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH4.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="ih-item square effect6 from_left_and_right ImagenCH"><a href="#">
+          <div class="img"><img   src="{% static 'imgs/CH5.jpeg' %}" alt=""></div>
+          <div class="mask1"></div>
+          <div class="mask2"></div>
+          <div class="info">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+
+  <div id="ProximasExtenciones" class="jumbotron">
+      <article  class="DFcoMorazan">
+        <h1>Proximas Extenciones </h1>
+        <br>
+        <section class="CHDatos">
+          <h3>Departamentos de:</h3>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugit libero a, possimus quidem placeat, error nemo, accusamus voluptatum ullam voluptatem impedit sed ab vero sequi totam perspiciatis odit doloribus!</p>
+        </section>
+
+        <section class="ChImagen">
+          <div class="ih-item square effect3 bottom_to_top ImagenCH"><a href="#">
+            <div class="img"><img  src="{% static 'imgs/CH2.jpeg' %}" alt=""></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div>
+            </a>
+          </div>
+        
+          <div class="ih-item square effect3 bottom_to_top ImagenCH"><a href="#">
+            <div class="img"><img   src="{% static 'imgs/CH3.jpeg' %}" alt=""></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div>
+            </a>
+          </div>
+        
+          <div  class="ih-item square effect3 bottom_to_top ImagenCH"><a href="#">
+            <div class="img"><img   src="{% static 'imgs/CH4.jpeg' %}" alt=""></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div>
+            </a>
+          </div>
+  
+          <div class="ih-item square effect3 bottom_to_top ImagenCH"><a href="#">
+            <div class="img"><img   src="{% static 'imgs/CH5.jpeg' %}" alt=""></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div>
+            </a>
+          </div>
+        </section>
+      </article>
+  </div>
+
+
+
+<!-- end normal -->
+{% endblock content_out %}
