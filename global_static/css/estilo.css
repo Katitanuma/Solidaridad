@@ -33,7 +33,8 @@ h1{
 
 .redesSociales{
   display: inline-block;
-  margin-left:780px; 
+  margin-top: -160px!important;
+  margin-left:1030px!important; 
 }
 .redesSociales img{
   height: 50px;
@@ -261,7 +262,7 @@ nav.navbar {
 }
 
 #f{
-  margin-left: 140px;
+  margin-left: 300px;
 }
 
 .RedesS img{
@@ -642,51 +643,6 @@ nav.navbar {
 }
 
 /*==================================== Pagina Que Hacemos ==========================*/
-/*#TCNSL{
-  text-align: center;
-  color: white;
-}
-
-.CNSL{
-  background: #58A7C4;
-  color: black;
-}
-
-#ICNSL{
-  height: 415px;
-}
-
-#ICNSB{
-  height: 350px;
-}
-#ICNSHF1, #ICNSHF2, #ICNSB1, #ICNSB2{
-  width: 500px;
-  height: 300px;
-}
-
-#ICNSB1{
- margin-left: 120px;
-}
-
-
-#IMGHF2{
-  width: 500px;
-  height: 300px;
-}
-
-#IMGHF1{
-  width: 546px;
-  height: 333px;
-  margin-top: -17px;
-  margin-left: -20px;
-}
-.ULCNSL p{
-  font-size: 20pt;
-  font-family: 'Arial';
-  padding: 14px 45px;
-  list-style: none;
-}
-*/
 
 .carousel{
   height: 650px!important;
@@ -1365,7 +1321,8 @@ video {
 
 @media screen and (max-width: 1366px){
   .redesSociales{
-     margin-left: 740px;
+     margin-left: 850px!important;
+     margin-top: -90px;
   }
 
   .MapaM{
@@ -1481,7 +1438,7 @@ video {
 
 @media screen and (max-width: 1200px){
   .redesSociales{
-     margin-left: 630px;
+     margin-left: 700px!important;
   }
   
   #FranciscoMorazan .CHDatos{
@@ -1593,7 +1550,7 @@ video {
   }
 
   .redesSociales{
-    margin-left: 480px;
+    margin-left: 530px!important;
   }
 
   .Reporte{
@@ -1604,7 +1561,10 @@ video {
   #izq, #der{
     height: 530px;
   }
-
+  
+  #f{
+    margin-left: 200px!important;
+  }
   .carousel-indicators{
     display: none;
   }
@@ -1835,7 +1795,7 @@ video {
     margin-top: -70px;
   }
   .redesSociales{
-    margin-left: 280px;
+    margin-left: 380px!important;
   }
   .menuS{
    display: none;
@@ -2056,7 +2016,7 @@ video {
 
 @media screen and (max-width: 800px){
   .redesSociales{
-    margin-left: 260px!important;
+    margin-left: 360px!important;
   }
   .na{
     font-size: 10pt;
@@ -2141,7 +2101,7 @@ video {
   }
 
   .redesSociales{
-    margin-left: 190px;
+    margin-left: 290px!important;
   }
   
    #FranciscoMorazan .CHDatos{
@@ -2244,7 +2204,7 @@ video {
 
 @media screen and (max-width: 736px){
   .redesSociales{
-    margin-left: 195px!important;
+    margin-left: 280px!important;
   }
   
   #Logo{
