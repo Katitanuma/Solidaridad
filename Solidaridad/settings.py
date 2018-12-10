@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'Solidaridad',
         'USER': 'sa',
         'PASSWORD': '123',
-        'HOST': 'localhost'
+        'HOST': 'ALEXIS\ALEXIS'
     }
 }
 

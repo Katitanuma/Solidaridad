@@ -9,6 +9,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from ong.models import *
 from django.template.defaultfilters import timesince, linebreaks
+from .forms import *
+
 
 @minified_response
 def login_form(request):
@@ -18,7 +20,7 @@ def login_form(request):
 			form.fields[campo].widget.attrs['class'] = 'form-control'
 		return render(request, 'login_form.html', {'form': form})
 	else:
-		return render(request, 'home.html')
+		return HttpResponseRedirect(reverse('app:home'))
 
 @minified_response
 def log_in(request):
@@ -68,7 +70,9 @@ def que_hacemos(request):
 
 @minified_response
 def voluntario(request):
-	return render (request, 'voluntario.html')
+	form = RegistroForm()
+	return render(request, 'voluntario.html', {'form': form})
+
 
 @minified_response
 def opiniones(request):
@@ -94,3 +98,15 @@ def opiniones_guardar(request):
 	else:
 		return HttpResponseRedirect(reverse('opiniones_cliente'))
 
+@minified_response
+def RegistroV_guardar(request):
+	mensaje=''
+	if request.method=='POST':
+		form=RegistroForm(request.POST)
+
+		if form.is_valid():
+			form.save()
+			mensaje='Datos Registrados con exito'
+	else:
+		mensaje='Error al registrar los datos'
+	return JsonResponse({'mensaje':mensaje})

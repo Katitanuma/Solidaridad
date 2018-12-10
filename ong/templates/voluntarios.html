@@ -14,7 +14,7 @@
 					<input type="hidden" value="{{ id }}" name="id_dato">
 					<div >
 						{{form.usuario}}
-						</div>
+					</div>
 					<div class="row">
 						{% for field in form  %}
 							
@@ -39,7 +39,6 @@
 					<div class="col-md-12" style="text-align: right">
 						<a href="{% url 'app:voluntarios' %}" class="btn btn-labeled btn-info" style="margin:5px"><span class="btn-label"><i class="glyphicon glyphicon-plus"></i></span>Nuevo</a>
 						<button type="submit" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Guardar</button>
-
 					</div>
 				</form>
 			</div>
@@ -56,7 +55,7 @@
 				<h3 class="panel-title">Listado de voluntarios</h3>
 			</div>
 			<!-- <div class="panel-body">
-							<p>...</p>
+								<p>...</p>
 			</div> -->
 			<div class="tablas_registros" class="table-responsive1">
 				<br>
@@ -96,9 +95,8 @@
 							</td>
 							<td>{{ v.usuario }}</td>
 							<td><a class="btn btn-primary" href="{% url 'app:editarVoluntario' v.pk %}">Editar</a>
-								<a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarVoluntario' v.pk %}">Eliminar</a>
-								<a class="btn btn-warning" id="delete_a" href="{% url 'app:usuario' v.usuario.pk %}">Usuario</a></td>
-
+							<a class="btn btn-danger" id="delete_a" href="{% url 'app:eliminarVoluntario' v.pk %}">Eliminar</a>
+							<a class="btn btn-warning" id="delete_a" href="{% url 'app:usuario' v.usuario.pk %}">Usuario</a></td>
 						</tr>
 					{% endfor %}
 				</tbody>
@@ -110,82 +108,79 @@
 </div>
 {% endblock contenidoApp %}
 {% block script %}
-	<script>
-
-		$('#delete_a').on('click', function(){
-			return confirm('¿Esta seguro de eliminar el registro?');
-		})
-		{% if error or form.errors %}
-			$.notify("Error al guardar el registro",{ 
+<script>
+	$('#delete_a').on('click', function(){
+		return confirm('¿Esta seguro de eliminar el registro?');
+	})
+	{% if error or form.errors %}
+			$.notify("Error al guardar el registro",{
 				className: 'error',
-				globalPosition:"right bottom", 
+				globalPosition:"right bottom",
 				clickToHide: true,
-			  	autoHide: true,
-			 	autoHideDelay: 5000,
-			 	arrowShow: true,
-			 	arrowSize: 5,
-			 	style: 'bootstrap',
-			 	showAnimation: 'slideDown',
-			 	showDuration: 400,
-			 	hideAnimation: 'slideUp',
-			 	hideDuration: 200,
-			 	gap: 2
+				autoHide: true,
+				autoHideDelay: 5000,
+				arrowShow: true,
+				arrowSize: 5,
+				style: 'bootstrap',
+				showAnimation: 'slideDown',
+				showDuration: 400,
+				hideAnimation: 'slideUp',
+				hideDuration: 200,
+				gap: 2
 			});
-		{% endif %}
-		{% if exito %}
-			$.notify('{{exito}}', 
-			{ 
+	{% endif %}
+	{% if exito %}
+			$.notify('{{exito}}',
+			{
 				className: 'success',
-				globalPosition:"right bottom", 
+				globalPosition:"right bottom",
 				clickToHide: true,
-			  	autoHide: true,
-			 	autoHideDelay: 5000,
-			 	arrowShow: true,
-			 	arrowSize: 5,
-			 	style: 'bootstrap',
-			 	showAnimation: 'slideDown',
-			 	showDuration: 400,
-			 	hideAnimation: 'slideUp',
-			 	hideDuration: 200,
-			 	gap: 2
+				autoHide: true,
+				autoHideDelay: 5000,
+				arrowShow: true,
+				arrowSize: 5,
+				style: 'bootstrap',
+				showAnimation: 'slideDown',
+				showDuration: 400,
+				hideAnimation: 'slideUp',
+				hideDuration: 200,
+				gap: 2
 			});
 			//$.notify('{{exito}}', "success", { position:"right bottom" });
 			//$.notify("Access granted", "info");
 			//$.notify("Warning: Self-destruct in 3.. 2..", "warn");
-		{% endif %}
-
-		var tablex = $('#tb').DataTable({
-	/*			 dom: 'Bfrtip',*/
-				 lengthChange: false,
-        		 buttons: [ 'copy', 'excel', 'pdf', 'colvis',  {
-		                extend: 'pdfHtml5',
-		                download: 'open',
-		                orientation: 'landscape',
-		                pageSize: 'LEGAL',
-		                text: 'Ver',
-		                title: 'Reporte de voluntarios'
-		            }],
-			 	 "scrollX": true,
-			 	  "language": {
-		            "lengthMenu": "Mostrar _MENU_ por páginas",
-		            "zeroRecords": "No se encontró ningún registro",
-		            "info": "Mostrando página _PAGE_ de _PAGES_",
-		            "infoEmpty": "Registro no valido",
-		            "infoFiltered": "(filtrado de _MAX_ registros totales)",
-		            'search': 'Buscar:'
-		            /*'search': 'Buscar: _INPUT_ aqui'*/,
-		             "paginate": {
-					      "next": "Siguiente",
-					      'previous': 'Anterior'
-				 	},
-				 	buttons: {
-		                colvis: 'Columnas visibles',
-		                copy: 'Copiar'
-		            }
-				 }
-			 });
-
-			 tablex.buttons().container()
-       		 .appendTo( '#tb_wrapper .col-sm-6:eq(0)' );
-	</script>
+	{% endif %}
+	var tablex = $('#tb').DataTable({
+			/*			 dom: 'Bfrtip',*/
+			lengthChange: false,
+	buttons: [ 'copy', 'excel', 'pdf', 'colvis',  {
+	extend: 'pdfHtml5',
+	download: 'open',
+	orientation: 'landscape',
+	pageSize: 'LEGAL',
+	text: 'Ver',
+	title: 'Reporte de voluntarios'
+	}],
+			"scrollX": true,
+			"language": {
+	"lengthMenu": "Mostrar _MENU_ por páginas",
+	"zeroRecords": "No se encontró ningún registro",
+	"info": "Mostrando página _PAGE_ de _PAGES_",
+	"infoEmpty": "Registro no valido",
+	"infoFiltered": "(filtrado de _MAX_ registros totales)",
+	'search': 'Buscar:'
+	/*'search': 'Buscar: _INPUT_ aqui'*/,
+	"paginate": {
+				"next": "Siguiente",
+				'previous': 'Anterior'
+				},
+				buttons: {
+	colvis: 'Columnas visibles',
+	copy: 'Copiar'
+	}
+			}
+		});
+		tablex.buttons().container()
+	.appendTo( '#tb_wrapper .col-sm-6:eq(0)' );
+</script>
 {% endblock script %}

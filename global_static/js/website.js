@@ -31,7 +31,7 @@ $(function () {
     $(".QS3").hover(function(){
       $(this).css( 'border','2px solid blue');
       $(this).css( 'background','blue');
-      $('.etiquetaQS3').text('Carrusel');
+      $('.etiquetaQS3').text('Rendición de Cuentas');
     });
 
 
@@ -44,7 +44,7 @@ $(function () {
     $(".QS4").hover(function(){
       $(this).css( 'border','2px solid blue');
       $(this).css( 'background','blue');
-      $('.etiquetaQS4').text('Rendición de Cuentas');
+      $('.etiquetaQS4').text('Preguntas Frecuentes');
     });
 
 
@@ -239,7 +239,7 @@ $(function () {
     $(".V2").hover(function(){
       $(this).css( 'border','2px solid blue');
       $(this).css( 'background','blue');
-      $('.etiquetaV2').text('Consultas');
+      $('.etiquetaV2').text('¿Cómo ser voluntario?');
     });
 
 
@@ -261,10 +261,27 @@ $(function () {
       $("#MA").trigger("click");
     });
 
+    $('#FrmRegistro').on('submit', function(e){
+    
+    e.preventDefault();
+
+    var url = $(this).attr('action');
+
+    $.post(url, $(this).serialize(), function(ctx) {
+      alert(ctx.mensaje);
+      $('#id_nombre').val('');
+      $('#id_apellido').val('');
+      $('#id_telefono').val('');
+      $('#id_correo').val('');
+      $('#id_mensaje').val('');
+    }, 'json');
+
+
+  });
+
     /*=============================== Donde Estamos================================*/
 
     $(".TextD").on('click', function(){
       $(".TextD").trigger("click");
     });
-
 });

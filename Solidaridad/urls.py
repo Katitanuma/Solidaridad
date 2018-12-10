@@ -29,8 +29,9 @@ urlpatterns = [
     url(r'^opiniones/$', views.opiniones, name='opiniones'),
     url(r'^security/', include('seguridad.urls')),
     url(r'^application/', include('ong.urls')),
-    url(r'^opiniones$', views.opiniones, name='opiniones_cliente'),
-    url(r'^opiniones_guardar$', views.opiniones_guardar, name='opiniones_guardar'),
+    url(r'^opiniones/$', views.opiniones, name='opiniones_cliente'),
+    url(r'^opiniones_guardar/$', views.opiniones_guardar, name='opiniones_guardar'),
+    url(r'^registroV_guardar/$', views.RegistroV_guardar, name='RegistroV_guardar'),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

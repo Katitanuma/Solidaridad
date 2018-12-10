@@ -187,7 +187,7 @@ nav.navbar {
 }
 .etiquetaQS3{
   position: fixed;
-  margin-left:90%;
+  margin-left:84%;
   margin-top: 144px;
   z-index: 1;
   font-family: "Dosis";
@@ -222,7 +222,7 @@ nav.navbar {
 
 .etiquetaV2{
   position: fixed;
-  margin-left:89%;
+  margin-left:84%;
   margin-top: 113px;
   z-index: 1;
   font-family: "Dosis"; 
@@ -283,14 +283,14 @@ nav.navbar {
 .DivCP{
   display: inline-block; 
   width: 69%;
-  margin-top: -5px;
-  margin-left: 10px;
-  height: 700px;
+  margin-top: -20px;
+  margin-left: 0px;
+  height: 727px;
   text-align: center;
   padding:50px;
   background: rgba(251,251,251,.91);
   box-shadow: 5px 5px 15px;
-  border-radius: 30px;
+  border-radius: 0px;
 }
 
 .DivCP p{
@@ -379,38 +379,12 @@ nav.navbar {
   height: 100%;
 }
 
-.CARD1:Hover .Front1{
-  transform: rotateX(-180deg);
-}
-.CARD1 .Back1{
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: 0.5s;
-}
-.Back1 h1{
-  color:white;
-}
-
-.Back1 p{
-  color:white;
-}
-
-
-.CARD1:Hover .Back1{
-  transform: rotateX(0deg);
-}
 
 /*=====================card2===================*/
 
 .CARD2{
   
-  margin-top: -24.5%;
+  margin-top: -22%;
   margin-left: 36%;
   width: 300px;
   height: 300px;
@@ -437,37 +411,11 @@ nav.navbar {
   height: 100%;
 }
 
-.CARD2:Hover .Front2{
-  transform: rotateX(-180deg);
-}
-.CARD2 .Back2{
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: 0.5s;
-}
-.Back2 h1{
-  color:white;
-}
-
-.Back2 p{
-  color:white;
-}
-
-
-.CARD2:Hover .Back2{
-  transform: rotateX(0deg);
-}
 
 /*=====================card3===================*/
 
 .CARD3{
-  margin-top: -24.5%;
+  margin-top: -22%;
   margin-left: 62%;
   width: 300px;
   height: 300px;
@@ -493,38 +441,12 @@ nav.navbar {
   width: 100%;
 }
 
-.CARD3:hover .Front3{
-  transform: rotateX(-180deg);
-}
-.CARD3 .Back3{
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: 0.5s;
-}
-.Back3 h1{
-  color:white;
-}
-
-.Back3 p{
-  color:white;
-}
-
-
-.CARD3:hover .Back3{
-  transform: rotateX(0deg);
-}
 
 /*=====================card4===================*/
 
 .CARD4{
   
-  margin-top: -24.5%;
+  margin-top: -22%;
   margin-left: 88%;
   width: 300px;
   height: 300px;
@@ -548,33 +470,6 @@ nav.navbar {
 
 .Front4 img{
   width: 100%;
-}
-
-.CARD4:Hover .Front4{
-  transform: rotateX(-180deg);
-}
-.CARD4 .Back4{
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: 0.5s;
-}
-.Back4 h1{
-  color:white;
-}
-
-.Back4 p{
-  color:white;
-}
-
-
-.CARD4:Hover .Back4{
-  transform: rotateX(0deg);
 }
 
 /* ==================================Presentacion institucional=========================== */
@@ -747,7 +642,7 @@ nav.navbar {
 }
 
 /*==================================== Pagina Que Hacemos ==========================*/
-#TCNSL{
+/*#TCNSL{
   text-align: center;
   color: white;
 }
@@ -790,6 +685,103 @@ nav.navbar {
   font-family: 'Arial';
   padding: 14px 45px;
   list-style: none;
+}
+*/
+
+.carousel{
+  height: 650px!important;
+}
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 5;
+}
+
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100px;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100px;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 4s all ease-in-out 5s;
+       -moz-transition: 4s all ease-in-out 5s; 
+        -ms-transition: 4s all ease-in-out 5s; 
+         -o-transition: 4s all ease-in-out 5s; 
+            transition: 4s all ease-in-out 5s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 4s all ease-in-out 5s;
+       -moz-transition: 4s all ease-in-out 5s; 
+        -ms-transition: 4s all ease-in-out 5s; 
+         -o-transition: 4s all ease-in-out 5s; 
+            transition: 4s all ease-in-out 5s;    
+}
+
+.slide-1, .slide-2, .slide-3, .slide-4, .slide-5{
+  height: 650px;
+}
+
+.slide-1 img,
+.slide-2 img,
+.slide-3 img,
+.slide-4 img,
+.slide-5 img{
+  height: 100%;
+}
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
 }
 /*==================================== Pagina Donde Estamos ========================*/
 
@@ -957,9 +949,10 @@ nav.navbar {
 }
 
 .CHDatos{
-  width: 47.5%;
+  width: 45%;
   display: inline-block;
   vertical-align: top;
+  margin-right: 2%;
 }
 
 .DCholuteca h1, .DFcoMorazan h1, .DComayagua h1{
@@ -968,6 +961,30 @@ nav.navbar {
 
 .DCholuteca h3, .DFcoMorazan h3, .DComayagua h3{
   color: black;
+}
+
+#Choluteca{
+  background: url('../imgs/FondoCHL.jpg');
+  background-size:cover; 
+}
+
+#FranciscoMorazan{
+  background: url('../imgs/FondoFCOM.jpg');
+  background-size:cover; 
+}
+
+#Comayagua{
+  background: url('../imgs/FondoCOM.png');
+  background-size:cover; 
+}
+
+#ProximasExtenciones{
+  background: url('../imgs/FondoEx.png');
+  background-size:cover; 
+}
+
+.TitExp{
+  font-family: 'Dosis';
 }
 
 .ChImagen{
@@ -1107,6 +1124,29 @@ height: 180px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.PEXT{
+  text-align: center!important;
+}
+.Extenciones{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.Extenciones p{
+  border: 1px solid black;
+  background: #96F7FD;
+  padding: 40px 20px;
+  vertical-align: middle;
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px;
+}
+#ProximasExtenciones{
+  height: auto;
+}
+.CHDatos{
+ margin-top: 90px;
+}
+
 
 
 /*=========================================Pagina Donacion=================================*/
@@ -1118,20 +1158,20 @@ video {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: -90;
     transform: translateX(-50%) translateY(-50%);
 }
 
 #polina { 
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-size: 14pt;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
   color: white;
   padding: 2rem;
   width: 33%;
   margin:2rem;
   margin-bottom: 40px;
-  margin-left: 900px;
+  margin-left: 960px;
  }
 
 .cuentas{
@@ -1141,7 +1181,7 @@ video {
   vertical-align: middle;
   height: 55px;
   width: 100%;
-  top: 623px;
+  top: 583px;
   text-align: center;
 
 }
@@ -1167,6 +1207,10 @@ video {
   font-size: 15pt;
 }
 /*====================================Pagina Voluntarios===========================================*/
+#SerVoluntario{
+  background: #FFF;
+}
+
 .CARD5{
   
   margin-top: 18%;
@@ -1304,7 +1348,57 @@ video {
 .modal-title{
   text-align: center;
 }
+
+#BtnEnviar{
+  margin-top: 200px;
+}
+
+#TCNSL{
+  text-align: center;
+}
+
+  .MapaM{
+    display: none;
+  }
+
 /*=================================== MEDIAS QUERIES===============================================*/
+
+@media screen and (max-width: 1366px){
+  .redesSociales{
+     margin-left: 740px;
+  }
+
+  .MapaM{
+    display: none;
+  }
+
+  .menuS{
+    margin-left: -20px;
+  }
+
+  .CARD2, .CARD3 , .CARD4{
+    margin-top:-24.3%;
+  }
+
+  .preguntas{
+    height: auto;
+  }
+  
+  #polina{
+    margin-top: 68px;
+    height: 715px;
+  }
+  #polina h1{
+    margin-bottom: 30px;
+  }
+
+  .TextD{
+    margin-bottom: 20px;
+  }
+  .cuentas{
+    margin-top: 120px;
+  }
+}
 
 @media screen and (max-width: 1350px){
   .redesSociales{
@@ -1314,20 +1408,92 @@ video {
   .menuS{
     margin-left: -20px;
   }
-}
 
-@media screen and (max-width: 1200px){
-  .redesSociales{
-     margin-left: 630px;
+  .CARD2, .CARD3 , .CARD4{
+    margin-top:-24.3%;
   }
 
+  .preguntas{
+    height: auto;
+  }
+  
+  #polina{
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 1280px){
+ 
   .CARD1, .CARD2, .CARD3 , .CARD4{
     width: 250px;
     height: 250px;
   }
 
   .CARD2, .CARD3, .CARD4{
-    margin-top:-23.5%;
+    margin-top:-21.5%;
+  }
+  
+  .ih-item.square.effect4{
+    height: 150px;
+    width: 270px;
+    margin:10px;
+  }
+
+  .ih-item.square.effect6{
+    height: 150px;
+    width: 270px;
+    margin:10px;
+  }
+
+  .ih-item.square.effect3{
+    height: 150px;
+    width: 270px;
+    margin:10px;
+  }
+
+  #ICNSL{
+    height: 340px;
+  }
+
+  #ICNSB{
+    height: 300px;
+  }
+
+  .info{
+    width: 270px!important;
+  }
+
+  .info h3{
+    font-size: 9pt!important;
+    text-align: center;
+  }
+
+  .info p{
+    margin-top: -20px;
+    font-size: 9pt!important;
+    text-align: center;
+  }
+
+  #polina{
+    margin-left: 856px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .redesSociales{
+     margin-left: 630px;
+  }
+  
+  #FranciscoMorazan .CHDatos{
+    margin-top: 5px!important;
+  }
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    width: 250px;
+    height: 250px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-23%!important;
   }
 
   .Reporte{
@@ -1342,24 +1508,78 @@ video {
   .carousel-indicators{
     height: 40px;
   }
-}
 
-
-@media screen and (max-width: 1280px){
- 
-  .CARD1, .CARD2, .CARD3 , .CARD4{
-    width: 250px;
-    height: 250px;
+  .Reporte{
+    margin-top: 0px;
   }
 
-  .CARD2, .CARD3, .CARD4{
-    margin-top:-21.5%;
+  .DivRP{
+    margin-top: -4px;
+  }
+
+  .ih-item.square.effect4{
+    height: 130px;
+    width: 260px;
+    margin:5px;
+  }
+
+  .ih-item.square.effect6{
+    height: 150px;
+    width: 260px;
+    margin:5px;
+  }
+
+  .ih-item.square.effect3{
+    height: 150px;
+    width: 260px;
+    margin:5px;
+  }
+
+  .info{
+    width: 260px!important;
+  }
+
+  .info h3{
+    font-size: 8pt!important;
+    text-align: center;
+  }
+
+  .info p{
+    font-size: 8pt!important;
+    text-align: center;
+  }
+  #polina{
+    margin-left: 800px;
+  }
+  .TextD{
+    margin-bottom: 5px;
+  }
+
+  .BtnD{
+    margin-top: -10px;
+  }
+  .cuentas{
+    margin-top: 120px;
   }
 }
-
 
 @media screen and (max-width: 1024px){
-   .menuS li a{
+
+  .slide-1 img,
+  .slide-2 img,
+  .slide-3 img,
+  .slide-4 img,
+  .slide-5 img{
+    height: 1020px!important;
+  }
+  .carousel{
+    height: 1020px!important;
+  }
+  #izqQH, #derQH, .slides{
+    height: 1020px!important;
+  }
+
+  .menuS li a{
     font-size: 13pt;
   } 
   
@@ -1369,7 +1589,7 @@ video {
   }
 
   .CARD2, .CARD3, .CARD4{
-    margin-top:-24.5%;
+    margin-top:-24%!important;
   }
 
   .redesSociales{
@@ -1386,7 +1606,18 @@ video {
   }
 
   .carousel-indicators{
-    height: 130px;
+    display: none;
+  }
+
+  .inicio{
+    height: 590px;
+  }
+  .item img{
+    height: 590px!important;
+  }
+
+  .Reporte{
+    margin-top: 0px;
   }
 
   .Fam img{
@@ -1402,22 +1633,204 @@ video {
     padding: 5px 10px;
   }
 
-  #descarga{
-    margin-top: 10px;
-  }
-
   #f{
     margin-left: 110px;
   }
+  
+  .Premios{
+    height: 590px;
+  }
+  .nav3{
+    display: none;
+  }
 
-  #descarga{
-    margin-left: -530px;
-    margin-top: 10px;
+  #IMGHF1{
+    width: 436px;
+    height: 280px;
+    margin-top: -17px;
+    margin-left: -20px;
+  }
+  #ICNSHF1, #ICNSHF2, #ICNSB1, #ICNSB2{
+    width: 400px;
+    height: 250px;
+  }
+
+  .CR{
+    width: 370px!important;
+  }
+
+  #ICNSHF2 {
+    margin-top: 40px;
   }
   
+  #IMGHF2{
+    width: 436px;
+    height: 280px;
+    margin-top: -17px;
+    margin-left: -20px;
+  }
+
+  #ICNSHF1 {
+    margin-top: 40px;
+  }
+
+  .ULCNSL p{
+    font-size: 18pt;
+  }
+
+  .Choluteca{
+    margin-left: 383px;
+  }
+
+  .Paraiso{
+    margin-left: 420px;
+  }
+
+  .Valle{
+    margin-left: 335px;
+  }
+
+  .FcoMorazan{
+    margin-left: 378px;
+  }
+
+  .LaPaz{
+    margin-left: 290px;
+  }
+
+  .Comayagua{
+    margin-left: 322px;
+  }
+
+  .Olancho{
+    margin-left: 468px;
+  }
+
+  .Yoro{
+    margin-left: 340px;
+  }
+  .Atlantida{
+    margin-left: 339px;
+  }
+  .Colon{
+    margin-left: 520px;
+  }
+
+  .Cortes{
+    margin-left: 259px;
+  }
+
+  .GraciasaDios{
+    margin-left: 714px;
+  }
+
+  .Lempira{
+    margin-left: 188px;
+  }
+
+  .Intibuca{
+    margin-left: 249px;
+  }
+
+  .SantaBarbara{
+    margin-left: 217px;
+  }
+
+  .Copan{
+    margin-left: 145px;
+  }
+
+  .Ocotepeque{
+    margin-left: 126px;
+  }
+
+  .Isla{
+    margin-left: 414px;
+  }
+
+  .ih-item.square.effect4{
+    height: 130px;
+    width: 230px;
+    margin:5px;
+  }
+
+  .ih-item.square.effect6{
+    height: 150px;
+    width: 230px;
+    margin:5px;
+  }
+
+  .ih-item.square.effect3{
+    height: 150px;
+    width: 230px;
+    margin:5px;
+  }
+
+  .cuentas{
+    margin-top: 600px;
+  }
+  .info{
+    width: 230px!important;
+  }
+
+  .info h3{
+    font-size: 7pt!important;
+    text-align: center;
+  }
+
+  .info p{
+    font-size: 7pt!important;
+    text-align: center;
+  }
+  .TextD{
+    font-size: 19.2pt;
+  }
+  #polina{
+    margin-left: 670px;
+    width: 350px;
+    height: 1190px;
+  }
+  .CARD5, .CARD6, .CARD7{
+    width: 250px;
+    height: 250px;
+  }
+
+  .CARD5{
+    margin-top: 22%;
+  }
+
+  .CARD6, .CARD7{
+    margin-top: -26.8%;
+  }
+
+  .ICQH{
+   display: none;
+  }
+
+  #izqQH, #derQH{
+    height: 590px!important;
+  }
+
+  .carousel{
+    height: 590px!important;
+  }
+
+  .slide-1, .slide-2, .slide-3,.slide-4,.slide-5,{
+    height: 590px!important;
+  }
+  .fade-carousel, .slide, .carousel-fade{
+    height: 590px!important;
+  }
+
+  .carousel-inner{
+    height: 590px!important;
+  }
 }
 
 @media screen and (max-width: 823px){
+  .na{
+    font-size: 11pt;
+  }
   .CartaP{
     margin-top: -70px;
   }
@@ -1428,15 +1841,45 @@ video {
    display: none;
   }
 
+  #Choluteca{
+    background: url('../imgs/FondoCHL1.png');
+    background-size: cover;
+  }
+  #ProximasExtenciones{
+    background: url('../imgs/FondoEx2.png');
+    background-size: 100% 100%;
+  }
+
+  #FranciscoMorazan{
+    background: url('../imgs/FondoFCOM2.png');
+    background-size: cover;
+  }
+
+  #Comayagua{
+    background: url('../imgs/FondoCOM2.png');
+    background-size: cover;
+  }
+
   .CARD1, .CARD2, .CARD3 , .CARD4{
-    margin-top: 180px;
+    margin-top: 90px;
     width: 175px;
     height: 175px;
     margin-right: 10px;
   }
+  
+  .Premios{
+    height: 480px;
+  }
+
+  .inicio{
+    height: 480px;
+  }
+  .item img{
+    height: 480px!important;
+  }
 
   .CARD2, .CARD3, .CARD4{
-    margin-top:-24.9%;
+    margin-top:-24.7%!important;
   }
 
   #izq, #der{
@@ -1447,12 +1890,51 @@ video {
     height: 230px;
   }
 
-  .Reporte{
-    margin-top: -228px;
-    padding: 20px;
-    text-align: left;
+  .snip1566{
+    height: 150px;
+    width: 150px;
+  }
+  .mapa{
+    display: none;
   }
 
+  .MapaM{
+    display: block;
+    text-align: center;
+  }
+
+  #MMovil{
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  .Reporte{
+    margin-top: 0px;
+    padding: 20px;
+    text-align: left;
+    height: 650px;
+  }
+  #RCT{
+    width: 360px;
+  }
+
+  #RCI, #RCI2{
+    width: 200px;
+  }
+
+  #RCI{
+    margin-top: -350px;
+    margin-left:370px; 
+  }
+
+  #RCI2{
+    margin-top: -460px;
+    margin-left:570px!important; 
+  }
+  
+  .CUADRO{
+    width: 190px;
+    height: 110px;
+  }
   .DivRP{
     width: 780px;
   }
@@ -1474,7 +1956,70 @@ video {
   #Logo{
     display: none;
   }
+  
+  .info, .mask1, .mask2{
+    display: none;
+  }
+  .ChImagen{
+    margin-top: 80px;
+  }
+  .ih-item.square.effect4{
+    height: 110px;
+    width: 182px;
+    margin:3px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 110px;
+    width: 182px;
+    margin:3px;
+  }
 
+  .ih-item.square.effect3{
+    height: 110px;
+    width: 182px;
+    margin:3px;
+  }
+  #polina{
+    margin-left: 440px;
+    height: 600px;
+  }
+  .TextD{
+    font-size: 13pt;
+  }
+  .cuentas{
+    margin-top:1px;
+  }
+
+  .CARD5, .CARD6, .CARD7{
+    width: 200px;
+    height: 200px;
+  }
+  .CARD6, .CARD7{
+    margin-top: -27.8%;
+  }
+
+  #TVol{
+    margin-top: -80px;
+    height: 530px;
+  }
+
+  .TiVol{
+    font-size: 33pt!important;
+  }
+
+  #BtnEnviar{
+    margin-top: -15px;
+    margin-left: 15px;
+  }
+
+  #izqQH, #derQH{
+    height: 483px!important;
+  }
+
+  .carousel{
+    height: 483px!important;
+  }
 }
 
 @media screen and (max-width: 812px){
@@ -1485,12 +2030,36 @@ video {
   .redesSociales{
     margin-left: 280px;
   }
+
+  .ih-item.square.effect4{
+    height: 110px;
+    width: 180px;
+    margin:3px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 110px;
+    width: 180px;
+    margin:3px;
+  }
+
+  .ih-item.square.effect3{
+    height: 110px;
+    width: 180px;
+    margin:3px;
+  }
+
+  #polina{
+    margin-left: 425px;
+  }
 }
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
   .redesSociales{
-    margin-left: 200px;
+    margin-left: 260px!important;
+  }
+  .na{
+    font-size: 10pt;
   }
   
   #Logo{
@@ -1498,14 +2067,14 @@ video {
   }
 
   .CARD1, .CARD2, .CARD3 , .CARD4{
-    margin-top: 120px;
+    margin-top: 90px;
     width: 160px;
     height: 160px;
     margin-right: 10px;
   }
 
   .CARD2, .CARD3, .CARD4{
-    margin-top:-24.9%;
+    margin-top:-23%!important;
   }
   
   .Fam{
@@ -1517,7 +2086,7 @@ video {
   }
 
   .Reporte{
-    margin-top: -255px;
+    margin-top: 0px;
     padding: 20px;
     text-align: left;
   }
@@ -1531,35 +2100,416 @@ video {
   }
 
 
+  .ih-item.square.effect4{
+    height: 110px;
+    width: 177px;
+    margin:3px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 110px;
+    width: 177px;
+    margin:3px;
+  }
+
+  .ih-item.square.effect3{
+    height: 110px;
+    width: 177px;
+    margin:3px;
+  }
+
+  #polina{
+    margin-left: 418px;
+  }
 }
 
+@media screen and (max-width: 768px){
+  .slide-1 img,
+  .slide-2 img,
+  .slide-3 img,
+  .slide-4 img,
+  .slide-5 img{
+    height: 720px!important;
+    z-index: 100;
+  }
+  .carousel{
+    height: 690px!important;
+    z-index: 100;
+  }
+  #izqQH, #derQH, .slides{
+    height: 690px!important;
+  }
 
-
-
-
-@media screen and (max-width: 740px){
   .redesSociales{
-    margin-left: 150px;
+    margin-left: 190px;
+  }
+  
+   #FranciscoMorazan .CHDatos{
+    margin-top: -5px!important;
+  }
+
+   #FranciscoMorazan h1{
+    margin-top: -18px!important;
+  }
+
+
+  #Logo{
+    display: none;
+  }
+
+  .CARD1, .CARD2, .CARD3 , .CARD4{
+    margin-top:80px;
+    width: 160px;
+    height: 160px;
+    margin-right: 10px;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top:-24.3%!important;
+  }
+  
+  .Fam{
+    width: 45%;
+  }
+
+  .DivRP{
+    width: 730px;
+  }
+
+  .Reporte{
+    margin-top: 0px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  #izq, #der{
+    height: 397px;
+  }
+
+  .carousel-indicators{
+    height: 255px;
+  }
+
+  .TextCa{
+    margin-top: -50px;
+  }
+  .TitCP{
+    margin-top: -15px;
+  }
+  #RCT{
+    width: 340px;
+  }
+
+  #RCI{
+    margin-left: 320px;
+  }
+
+  #RCI2{
+    margin-left: 520px!important;
+  }
+  #Prog{
+    font-size: 44pt;
+  }
+
+  .ih-item.square.effect4{
+    height: 105px;
+    width: 170px;
+    margin:1px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 105px;
+    width: 170px;
+    margin:1px;
+  }
+
+  .ih-item.square.effect3{
+    height: 105px;
+    width: 170px;
+    margin:1px;
+  }
+
+  #polina{
+    margin-left: 400px;
+    width: 365px;
+    height: 745px;
+  }
+  .TextD{
+    font-size: 15pt;
+  }
+  .cuentas{
+    margin-top: 154px;
+  }
+}
+
+@media screen and (max-width: 736px){
+  .redesSociales{
+    margin-left: 195px!important;
   }
   
   #Logo{
     display: none;
   }
-}
-@media screen and (max-width: 684px){
-  .redesSociales{
-    margin-left: 100px;
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top: -25.6%!important;
+  }
+
+  .na{
+    font-size: 14pt;
+  }
+
+  .snip1566{
+    width: 120px;
+    height: 120px;
+  }
+
+  .ih-item.square.effect4{
+    height: 105px;
+    width: 165px;
+    margin:1px;
   }
   
+  .ih-item.square.effect6{
+    height: 105px;
+    width: 165px;
+    margin:1px;
+  }
+
+  .ih-item.square.effect3{
+    height: 105px;
+    width: 165px;
+    margin:1px;
+  }
+
+  #polina{
+    margin-left: 380px;
+    width: 365px;
+    height: 600px;
+  }
+  .TextD{
+    font-size: 13pt;
+  }
+  .cuentas{
+    margin-top: 0px;
+  }
+
+  .CARD6, .CARD7{
+    margin-top: -28.5%;
+  }
+
+  .itemsG{
+    font-size: 10pt;
+  }
+
+  .caracteristicas{
+    font-size: 10pt!important;
+  }
+}
+
+@media screen and (max-width: 731px){
+  
+  .ih-item.square.effect4{
+    height: 105px;
+    width: 164px;
+    margin:1px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 105px;
+    width: 164px;
+    margin:1px;
+  }
+
+  .ih-item.square.effect3{
+    height: 105px;
+    width: 164px;
+    margin:1px;
+  }
+  
+  #RCT{
+    width: 300px;
+  }
+
+  #RCI{
+    margin-left: 305px;
+  }
+  #RCI2{
+    margin-left: 505px!important;
+  }
+
+  #Prog{
+    font-size: 38pt!important;
+  }
+}
+
+@media screen and (max-width: 667px){
+
+  #Choluteca{
+    background: url('../imgs/FondoCHL3.png');
+    background-size: cover;
+  }
+
+  #FranciscoMorazan{
+    background: url('../imgs/FondoFCOM3.png');
+    background-size: cover;
+  }
+
+  #Comayagua{
+    background: url('../imgs/FondoCOM3.png');
+    background-size: cover;
+  }
+  .rectangulo h2{
+    width: 148px;
+  }
+  .CHDatos, .ChImagen{
+    width: 550px;
+  }
+  .DivCP p{
+    font-size: 13pt;
+  }
+  .redesSociales{
+    margin-left: 10px!importants;
+  }
+   #COMAY{
+    margin-top: 49px!important;
+  }
+
+  .CARD1, .CARD2, .CARD3, .CARD4{
+    width: 130px;
+    height: 130px;
+  }
+  
+  .CARD1{
+    margin-top: 40px!important;
+  }
+  
+  .CARD2{
+    margin-top: -129px!important;
+  }
+  
+  .CARD3{
+     margin-top: -129px!important;
+  }
+
+  .CARD4{
+     margin-top: -129px!important;
+  }
+
   #Logo{
     display: none;
   }
+
+  #RCT{
+    width: 250px;
+  }
+
+  #RCI{
+    margin-left: 245px;
+  }
+
+  #RCI2{
+    margin-left: 440px!important;
+  }
+
+  #Prog{
+    font-size: 32pt!important;
+  }
+
+  #RCT h2{
+    font-size: 20pt;
+  }
+
+  #f{
+    margin-left: 50px;
+  }
+
+  .ih-item.square.effect4{
+    height: 110px;
+    width: 190px;
+    margin:1px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 110px;
+    width: 190px;
+    margin:1px;
+  }
+
+  .ih-item.square.effect3{
+    height: 110px;
+    width: 190px;
+    margin:1px;
+  }
+
+  #polina{
+    margin-left: 310px;
+  }
+
+  .CARD5, .CARD6, .CARD7{
+    width: 170px;
+    height: 170px;
+  }
+
+  .CARD6, .CARD7{
+    margin-top: -169px;
+  }
+
+  #Comayagua .ChImagen,
+  #Choluteca .ChImagen,
+  #FranciscoMorazan .ChImagen{
+    margin-top: -5px;
+    text-align: center;
+  }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
   .redesSociales{
     display: none;
   }
   
+  .rectangulo h2{
+    text-align: center;
+    margin-left: 0px;
+  }
+  
+  .CHDatos{
+    margin-top: 0px!important;
+  }
+
+  .DCholuteca, .DFcoMorazan, .DComayagua{
+    margin-top: 50px!important;
+  }
+
+  .RedesS h3{
+    font-size: 16pt;
+    margin-left: 20px;
+  }
+
+  .CHDatos p{
+    font-size: 14pt!important;
+  }
+
+  #Comayagua .ChImagen,
+  #Choluteca .ChImagen,
+  #FranciscoMorazan .ChImagen{
+    margin-top: -5px;
+    text-align: center;
+  }
+
+  #Comayagua article,
+  #Choluteca article,
+  #FranciscoMorazan article{
+    margin-top: -25px;
+    text-align: center;
+  }
+  .DCholuteca, .DFcoMorazan, .DComayagua{
+    margin-top: -40px;
+  }
+  
+  #Choluteca{
+    height: 630px;
+  }
+
   #Logo{
     display: none;
   }
@@ -1567,11 +2517,945 @@ video {
   .rectangulo{
     text-align: center;  
   }
+  
+  .ih-item.square.effect4{
+    height: 110px;
+    width: 190px;
+  }
+  
+  .ih-item.square.effect6{
+    height: 110px;
+    width: 190px;
+  }
 
+  .ih-item.square.effect3{
+    height: 110px;
+    width: 190px;
+  }
+  #Prog{
+    font-size: 24pt!important;
+    text-align: center;
+  }
+  
+  .TitRP{
+    font-size: 30pt;
+    margin-left: -100px!important;
+    text-align: center!important;
+  }
+  #RCT{
+    width: 210px;
+  }
+
+  #RCT h2{
+    font-size: 18pt;
+  }
+  #RCI{
+    margin-left:215px;
+  }
+
+  #RCI2{
+    margin-left: 410px!important;
+  }
   .rectangulo h2{
     margin-top: 35px;
+  }
+  #polina{
+    margin-left: 285px;
+  }
+
+  .imgC{
+    margin-top: 10px;
+    height: 40px;
+  }
+  .TiVol{
+    font-size: 36px!important;
+  }
+}
+
+@media screen and (max-width: 568px){
+  
+  #Choluteca{
+    background: url('../imgs/FondoCHL4.png');
+    background-size: cover;
+  }
+
+  #FranciscoMorazan{
+    background: url('../imgs/FondoFCOM4.png');
+    background-size: cover;
+  }
+
+  #Comayagua{
+    background: url('../imgs/FondoCOM4.png');
+    background-size: cover;
+
+  }
+
+  #ProximasExtenciones{
+    background: #E3E3E3;
+  }
+
+  .CHDatos, .ChImagen{
+    width: 550px;
+  }
+  .DComayagua{
+    margin-top: -20px!important;
+  }
+  
+  #Comayagua .ChImagen,
+  #Choluteca .ChImagen,
+  #FranciscoMorazan .ChImagen{
+   text-align: center;
+   margin-left: -50px;
+  }
+  .RedesS img{
+    width: 50px;
+    height: 55px;
+    margin-right: 20px;
+  }
+
+  .DivCP p{
+    font-size: 12pt!important;
+  }
+
+  .CARD1, .CARD2, .CARD3, .CARD4{
+    height: 110px;
+    width: 110px;
+    margin-top: 70px!important;
+  }
+
+  .CARD2, .CARD3, .CARD4{
+    margin-top: -110px!important;
+  }
+
+  .inicio{
+    height: 320px;
+  }
+
+  .item img{
+    height: 320px!important;
+  }
+  
+  #izq, #der{
+    height: 320px;
+  }
+
+  .TitRP{
+    margin-left: -180px!important;
+  }
+
+  .CUADRO{
+    height: 110px;
+    width: 150px;
+  }
+
+  #RCI2{
+    margin-left: 380px!important;
+  }
+
+  #T2 h1{
+    font-size: 22pt;
+  }
+
+  #T2 h3{
+    font-size: 18pt;
+  }
+
+  #T1 h1{
+    font-size: 22pt;
+  }
+
+  #T1 h3{
+    font-size: 18pt;
+  }
+
+  #T3 h1{
+    font-size: 22pt;
+  }
+
+  #T3 h3{
+    font-size: 18pt;
+  }
+
+  #T4 h4{
+    margin-top: -10px;
+    font-size: 12pt;
+  }
+
+  .carousel{
+    height: 390px!important;
+  }
+
+  .slide-1 img,
+  .slide-2 img,
+  .slide-3 img,
+  .slide-4 img,
+  .slide-5 img{
+    height: 390px!important;
+  }
+
+  #izqQH, #derQH{
+    height: 390px!important;
+  }
+
+  .snip1566{
+    height: 100px;
+    width: 100px;
+    margin-right: 15px;
+  }
+
+  .CHDatos{
+    width: 500px;
+  }
+
+  #polina{
+    margin-left: 210px;
+  }
+
+  .imgC{
+    height: 30px;
+  }
+  .cuentas h4{
+    margin-top: 20px;
+  }
+
+  .CARD5, .CARD6, .CARD7{
+    height: 135px;
+    width: 135px;
+  }
+
+  .CARD6, .CARD7{
+    margin-top: -136px;
+  }
+  
+  #TVol{
+    height: 390px!important;
+  }
+}
+
+@media screen and (max-width: 480px){
+  
+  .DCholuteca p, .DFcoMorazan p, .DComayagua p{
+      margin-top: -60px;
+  }
+
+  #Comayagua{
+    background: url('../imgs/FondoCOM5.png');
+    background-size: scale(2);
+  }
+  
+
+  .RedesS img{
+    width: 45px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  #f{
+    margin-left: 30px;
+  }
+  .DivCP p{
+    font-size: 11pt!important;
+  }
+
+  .CARD1, .CARD2, .CARD3, .CARD4{
+    height: 85px;
+    width: 85px;
+    margin-top: 40px!important;
+  }
+
+  .Premios{
+    height: 380px;
+  }
+  .DivPR{
+    margin-top: -40px;
+  }
+  .CARD2, .CARD3, .CARD4{
+    margin-top: -85px!important;
+  }
+  .TitCP{
+    font-size: 26pt;
+  }
+
+  .TitRP{
+    margin-left: -260px!important;
+    font-size: 26pt;
+  }
+
+  .CUADRO{
+    height: 90px;
+    width: 120px;
+  }
+
+  #RCI{
+    margin-left: 185px;
+  }
+
+   #RCI2{
+    margin-top: -380px;
+    margin-left: 315px!important;
+  }
+  
+   #T2 h1, #T1 h1, #T3 h1{
+    font-size: 20pt;
+  }
+
+  #T2 h3, #T1 h3, #T3 h3{
+    margin-top: -5px;
+    font-size: 16pt;
+  }
+
+  #T4 h4{
+    margin-top: -10px;
+    font-size: 10pt;
+  }
+
+  .Reporte{
+    height: 550px;
+  }
+  
+  .snip1566{
+    height: 80px;
+    width: 80px;
+    margin-right: 15px;
+  }
+  .CHDatos{
+    width: 400px;
+  }
+
+  .ChImagen{
+    margin-left: 15px;
+  }
+  #Comayagua .ChImagen,
+  #Choluteca .ChImagen,
+  #FranciscoMorazan .ChImagen{
+    text-align: center;
+    margin-left: -80px;
+  }
+  #polina{
+    margin-left: 180px;
+    height: 720px;
+    width: 300px;
+  }
+  .cuentas{
+    margin-top: 120px;
+  }
+  .imgC{
+    height: 30px;
+  }
+  .cuentas h4{
+    margin-top: 20px;
+    font-size: 10pt;
+  }
+
+  #MA, #MG, #ML{
+    font-size: 12pt!important;
+  }
+  
+  .CARD5, .CARD6, .CARD7{
+    height: 130px;
+    width: 130px;
+  }
+
+  .CARD6, .CARD7{
+    margin-top: -130px;
   }
 
 }
 
+@media screen and (max-width: 414px){
+    #FranciscoMorazan{
+      background: url('../imgs/FondoFCOM5.png');
+      background-size: cover;
+    }
 
+    .DFcoMorazan p{
+      margin-top: -20px!important;
+    }
+    .item img{
+      height: 250px!important; 
+    }
+    .inicio, #izq, #der{
+      height: 250px;
+    }
+    .DivCP{
+      font-size: 9pt;
+      padding: 60px 20px;
+    }
+
+    .TitPR{
+      font-size: 24pt;
+    }
+    
+    .TC{
+      font-size: 10pt;
+    }
+
+    .CARD1, .CARD2, .CARD3, .CARD4{
+      height: 92px;
+      width:  92px;
+    }
+
+    .CARD2, .CARD3, .CARD4{
+      margin-top: -92px!important;
+    }
+    .DivPR{
+      padding: 60px 20px;
+    }
+    
+    .Premios{
+      height: 350px;
+    }
+    
+    #RCT{
+      width: 110px!important;
+      margin-top: -50px;
+      text-align: left;
+    }
+    #Prog{
+      font-size: 22pt!important;
+    }
+
+    .CUADRO{
+      height: 100px;
+      width: 100px;
+    }
+
+    #RCI{
+      margin-left: 150px;
+      margin-top: -400px;
+    }
+
+    #RCI2{
+      margin-left: 260px!important;
+      margin-top: -420px;
+    }
+    #T1 h3{
+      font-size: 13pt!important;
+    }
+    .TitRP{
+      font-size: 25pt;
+      margin-left: -350px!important;
+    }
+    .preguntas h1{
+      font-size: 24pt;
+    }
+
+    .RedesS img{
+      width: 35px;
+      height: 40px;
+      margin-right: 5px;
+    }
+
+    .snip1566{
+      height: 70px;
+      width: 70px;
+      margin-right: 10px;
+    }
+
+    .TitExp{
+      font-size: 22pt;
+    }
+
+    .CHDatos, .ChImagen{
+      width: 330px;
+    }
+    .ih-item.square.effect4{
+      height: 90px;
+      width: 150px;
+    }
+    
+    .ih-item.square.effect6{
+      height: 90px;
+      width: 150px;
+    }
+
+    #Comayagua .ChImagen,
+    #Choluteca .ChImagen,
+    #FranciscoMorazan .ChImagen{
+      text-align: center;
+      margin-left: 5px;
+    }
+
+    .DFcoMorazan{
+      margin-top: -25px!important;
+    }
+
+    #polina{
+      margin-left: 115px;
+    }
+
+    .cuentas img{
+      height: 21px;
+    }
+
+    .cuentas h4{
+      font-size: 8.5pt;
+    }
+
+    .CARD5, .CARD6, .CARD7{
+      height: 110px;
+      width: 110px;
+    }
+
+    .CARD6, .CARD7{
+      margin-top: -110px;
+    }
+
+    .slide-1 img,
+    .slide-2 img,
+    .slide-3 img,
+    .slide-4 img,
+    .slide-5 img{
+      height: 430px!important;
+      width: 430px;
+    }
+    .carousel{
+      height: 430px!important;
+    }
+    #izqQH, #derQH{
+      height: 480px!important;
+    }
+}
+
+@media screen and (max-width: 384px){
+    
+    #FranciscoMorazan{
+      background: url('../imgs/FondoFCOM6.png');
+      background-size: cover;
+    }
+
+    #Choluteca{
+      background: url('../imgs/FondoCHL6.png');
+      background-size: cover;
+    }
+
+    #Comayagua{
+      background: url('../imgs/FondoCOM6.png');
+      background-size: cover;
+    }
+
+    .DFcoMorazan p{
+      margin-top: -40px!important;
+    }
+    .TitCP{
+      font-size: 20pt;
+    }
+
+    .CARD1, .CARD2, .CARD3, .CARD4{
+      height: 85px;
+      width:  85px;
+    }
+    
+    .CARD2, .CARD3, .CARD4{
+      margin-top: -85px!important;
+    }
+  
+
+    #RCT{
+      width: 80px!important;
+      margin-top: -50px;
+      text-align: left;
+    }
+
+    #RCT h2{
+      font-size: 14pt;
+      text-align: center;
+    }
+    #Prog{
+      font-size: 18pt!important;
+    }
+
+    .CUADRO{
+      height: 100px;
+      width: 100px;
+    }
+
+    #RCI{
+      margin-left: 130px;
+      margin-top: -360px;
+    }
+
+    #RCI2{
+      margin-left: 240px!important;
+      margin-top: -420px;
+    }
+
+    #T1 h3{
+      font-size: 13pt!important;
+    }
+
+    .carousel, #izqQH, #derQH, .slide-1 img, .slide-2 img, .slide-3 img,  .slide-4 img,  .slide-5 img{
+      height: 400px!important;
+    }
+
+    .snip1566{
+      height: 65px;
+      width: 65px;
+    }
+
+    .CHDatos, .ChImagen{
+      width: 300px;
+    }
+
+    .ih-item.square.effect4{
+      height: 90px;
+      width: 145px;
+    }
+    
+    .ih-item.square.effect6{
+      height: 90px;
+      width: 140px;
+    }
+
+    #polina{
+      margin-left: 95px;
+    }
+
+    .cuentas img{
+      height: 20px;
+    }
+
+    .cuentas h4{
+      font-size: 8.5pt;
+    }
+    
+    .CARD5, .CARD6, .CARD7{
+      height: 103px;
+      width: 103px;
+    }
+
+    .CARD6, .CARD7{
+      margin-top: -102px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    
+    #RCI2{
+      margin-left: 236px!important;
+      margin-top: -420px;
+    }
+
+    #T1 h3{
+      font-size: 13pt!important;
+    }
+
+    .carousel, #izqQH, #derQH, .slide-1 img, .slide-2 img, .slide-3 img,  .slide-4 img,  .slide-5 img{
+      height: 390px!important;
+    }
+
+    .snip1566{
+      height: 65px;
+      width: 65px;
+      margin-right: -5px;
+    }
+
+
+    .slide-1 img,
+    .slide-2 img,
+    .slide-3 img,
+    .slide-4 img,
+    .slide-5 img{
+      height: 480px!important;
+      width: 375px;
+    }
+    .carousel{
+      height: 480px!important;
+    }
+    #izqQH, #derQH{
+      height: 480px!important;
+    }
+    .CHDatos, .ChImagen{
+      width: 300px;
+    }
+
+    #polina{
+      margin-left: 86px;
+      height: 760px;
+    }
+
+    .cuentas img{
+      height: 23pt;
+    }
+    
+    .cuentas{
+      height: 100px;
+    }
+    .cuentas h4{
+      font-size: 9pt;
+    }
+    
+    .CARD5, .CARD6, .CARD7{
+      height: 101px;
+      width: 101px;
+    }
+
+    .CARD6, .CARD7{
+      margin-top: -100px;
+    }
+
+    #TVol{
+      height: 330px!important;
+    }
+
+    .TitRP{
+      margin-left: -400px!important;
+    }
+
+    .preguntas h1{
+      font-size: 22pt;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .DivCP p{
+      font-size: 10.3pt!important;
+    }
+
+    .CARD1, .CARD2, .CARD3, .CARD4{
+      height: 80px;
+      width:  80px;
+    }
+    
+    .CARD2, .CARD3, .CARD4{
+      margin-top: -79px!important;
+    }
+  
+    #RCT{
+      width: 70px!important;
+      margin-top: -50px;
+      text-align: left;
+      margin-left: -5px;
+    }
+
+    #RCT h2{
+      font-size: 14pt;
+      text-align: center;
+    }
+    #Prog{
+      font-size: 18pt!important;
+    }
+    
+    .TitRP{
+      margin-left: -390px!important;
+    }
+    .CUADRO{
+      height: 100px;
+      width: 100px;
+    }
+
+    #RCI{
+      margin-left: 115px;
+      margin-top: -360px;
+    }
+
+    #RCI2{
+      margin-left: 221px!important;
+      margin-top: -420px;
+    }
+
+    #T1 h3{
+      font-size: 13pt!important;
+    }
+
+    .carousel, #izqQH, #derQH, .slide-1 img, .slide-2 img, .slide-3 img,  .slide-4 img,  .slide-5 img{
+      height: 390px!important;
+    }
+
+    .snip1566{
+      height: 65px;
+      width: 65px;
+      margin-right: -5px;
+    }
+
+    .CHDatos, .ChImagen{
+      width: 297px;
+    }
+    
+    .ChImagen{
+      margin-left: -10px!important;
+    }
+    #polina{
+      margin-left: 110px;
+      width: 250px;
+      height: 870px;
+    }
+
+    .cuentas img{
+      height: 23pt;
+    }
+    
+    .cuentas{
+      margin-top: 240px;
+      height: 100px;
+    }
+    .cuentas h4{
+      font-size: 9pt;
+    }
+    
+    .CARD5, .CARD6, .CARD7{
+      height: 97px;
+      width: 97px;
+    }
+
+    .CARD6, .CARD7{
+      margin-top: -98px;
+    }
+
+    #TVol{
+      height: 330px!important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .DFcoMorazan p{
+      margin-top: -65px!important;
+    }
+
+    .DivCP p{
+      font-size: 9.7pt!important;
+    }
+
+    .CARD1, .CARD2, .CARD3, .CARD4{
+      height: 69px;
+      width:  69px;
+    }
+    
+    .CARD2, .CARD3, .CARD4{
+      margin-top: -69px!important;
+    }
+  
+    #RCT{
+      width: 70px!important;
+      margin-top: -50px;
+      text-align: left;
+      margin-left: -5px;
+    }
+
+    #RCT h2{
+      font-size: 11pt;
+      text-align: center;
+    }
+    #Prog{
+      font-size: 14pt!important;
+    }
+    
+    .TitRP{
+      margin-left: -390px!important;
+    }
+    .CUADRO{
+      height: 90px;
+      width: 90px;
+    }
+
+    #RCI{
+      margin-left: 95px;
+      margin-top: -300px;
+    }
+
+    #RCI2{
+      margin-left: 190px!important;
+      margin-top: -380px;
+    }
+
+    #T1 h3{
+      font-size: 13pt!important;
+    }
+
+    #T4 h4{
+      font-size: 9pt;
+    }
+
+    .carousel, #izqQH, #derQH, .slide-1 img, .slide-2 img, .slide-3 img,  .slide-4 img,  .slide-5 img{
+      height: 390px!important;
+    }
+    
+    .preguntas h1{
+      font-size: 16pt;
+    }
+    .snip1566{
+      height: 55px;
+      width: 55px;
+      margin-right: -5px;
+    }
+
+    .CHDatos, .ChImagen{
+      width: 255px;
+    }
+    
+    .ChImagen{
+      margin-left: -10px!important;
+    }
+
+    .ih-item.square.effect4{
+      height: 80px;
+      width: 125px;
+    }
+    
+    .ih-item.square.effect6{
+      height: 80px;
+      width: 125px;
+    }
+    #polina{
+      margin-left: 100px;
+      width: 230px;
+      height: 940px;
+    }
+    
+    #COMAY{
+      margin-top: 35px!important;
+    }
+
+    .DComayagua h1{
+      margin-top: -15px;
+    }
+
+    #Choluteca, #FranciscoMorazan, #Comayagua{
+      height: 540px;
+    }
+    #Extension{
+      margin-top: -70px;
+    }
+    
+    #Choluteca{
+      margin-top: 20px;
+    }
+
+    #Choluteca h1{
+      margin-top: -30px;
+    }
+
+    #FranciscoMorazan h1{
+      margin-top: 25px;
+     font-size: 22pt;
+    }
+
+
+    .CHDatos p{
+      font-size: 12pt!important;
+    }
+    .cuentas img{
+      height: 23pt;
+    }
+    
+    .cuentas{
+      margin-top: 300px;
+      height: 100px;
+    }
+    .cuentas h4{
+      font-size: 8pt;
+    }
+    
+    .CARD5, .CARD6, .CARD7{
+      height: 86px;
+      width: 86px;
+    }
+
+    .CARD6, .CARD7{
+      margin-top: -85px;
+    }
+
+    #TVol{
+      height: 330px!important;
+    }
+}

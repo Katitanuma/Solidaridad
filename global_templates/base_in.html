@@ -115,6 +115,10 @@
 		a {
 			color: red;
 		}
+
+		#nombre{
+			font-size: 18pt!important;
+		}
 		a:hover,
 		a:focus {
 			color: red;
@@ -151,7 +155,7 @@
 				<span class="icon-bar"></span>
 				</button>
 				{% load static %}
-				<a style="padding-top:8px" class="navbar-brand" href="{% url 'app:home' %}"><img style="display:inline-block; margin-bottom:10px" src="{% static 'imgs/logo.png' %}" width="60px" height="30px" alt=""> <span style="margin-top:10px !important; display:inline-block">SOLIDARIDAD HONDURAS</span></a>
+				<a style="padding-top:8px" class="navbar-brand" href="{% url 'app:home' %}"><img style="display:inline-block; margin-bottom:10px" src="{% static 'imgs/logo.png' %}" width="60px" height="30px" alt=""> <span id="nombre" style="margin-top:10px !important; display:inline-block">SOLIDARIDAD HONDURAS</span></a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse menusGR">
 				<ul class="nav navbar-nav navbar-user navbar-right">

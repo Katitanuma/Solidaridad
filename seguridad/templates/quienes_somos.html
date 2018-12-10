@@ -5,8 +5,7 @@
 <div class="nav2">
   <ul class="menuS">
     <li><a href="#CP"><strong>Carta de Presentación</strong></a></li>
-    <li><a href="#PR"><strong>Premios y Reconocimientos</strong></a></li>
-    <li><a href="#PI"><strong>Presentación Institucional</strong></a></li>
+    <li><a href="#PR"><strong>Nuestros Valores</strong></a></li>
     <li><a href="#RP"><strong>Rendición de Cuenta </strong></a></li>
     <li><a href="#FA"><strong>Preguntas Frecuentes</strong></a></li>
   </ul>
@@ -14,16 +13,15 @@
 <ul class="nav3">
   <li><p><strong class="etiquetaQS1"></strong></p><a class="QS1" href="#CP"></a></li>
   <li><p><strong class="etiquetaQS2"></strong></p><a class="QS2" href="#PR"></a></li>
-  <li><p><strong class="etiquetaQS3"></strong></p><a class="QS3" href="#PI"></a></li>
-  <li><p><strong class="etiquetaQS4"></strong></p><a class="QS4" href="#RP"></a></li>
-  <li><p><strong class="etiquetaQS5"></strong></p><a class="QS5" href="#FA"></a></li>
+  <li><p><strong class="etiquetaQS3"></strong></p><a class="QS3" href="#RP"></a></li>
+  <li><p><strong class="etiquetaQS4"></strong></p><a class="QS4" href="#FA"></a></li>
 </ul>
 
 <div id="CP" class="CartaP">
   <article  class="DivCP">
     <h2 class="TitCP" ><strong>SOLIDARIDAD</strong></h2>
     <br><br><br>
-    <p align="justify">
+    <p align="justify" class="TextCa">
     Somos un grupo de voluntarios hondureños (de todas las edades, estatus sociales, géneros, preferencias políticas o religiosas) trabajando por realizar el sueño de erradicar la malnutrición infantil en Honduras.</p>
     <br>
     <p align="justify">
@@ -44,22 +42,12 @@
         <img src="{% static 'imgs/Paz.png' %}" alt="..." class="img-thumbnail">
         <h1 class="TC">PAZ</h1>
       </div>
-      <div class="Back1">
-        <h1>OK</h1>
-        <br>
-        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam beatae aliquid recusandae, ad possimus quidem cupiditate quam reiciendis, tempora voluptate harum, sint iusto totam, deleniti quae! Expedita perferendis similique ad.</p>
-      </div>
     </div>
     
     <div class="CARD2">
       <div class="Front2">
         <img src="{% static 'imgs/Liderazgo.jpg' %}" alt="..." class="img-thumbnail">
         <h1 class="TC">LIDERAZGO</h1>
-      </div>
-      <div class="Back2">
-        <h1>LIDERAZGO</h1>
-        <br>
-        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam beatae aliquid recusandae, ad possimus quidem cupiditate quam reiciendis, tempora voluptate harum, sint iusto totam, deleniti quae! Expedita perferendis similique ad.</p>
       </div>
     </div>
     
@@ -68,21 +56,11 @@
         <img src="{% static 'imgs/Trabajoenequipo.jpg' %}" alt="..." class="img-thumbnail">
         <h1 class="TC">TRABAJO EN EQUIPO</h1>
       </div>
-      <div class="Back3">
-        <h1>OK</h1>
-        <br>
-        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam beatae aliquid recusandae, ad possimus quidem cupiditate quam reiciendis, tempora voluptate harum, sint iusto totam, deleniti quae! Expedita perferendis similique ad.</p>
-      </div>
     </div>
     <div class="CARD4">
       <div class="Front4">
         <img src="{% static "imgs/Amor.jpg" %}" alt="..." class="img-thumbnail">
         <h1 class="TC" >AMOR</h1>
-      </div>
-      <div class="Back4">
-        <h1>OK</h1>
-        <br>
-        <p ALIGN="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam beatae aliquid recusandae, ad possimus quidem cupiditate quam reiciendis, tempora voluptate harum, sint iusto totam, deleniti quae! Expedita perferendis similique ad.</p>
       </div>
     </div>
   </article>
@@ -179,10 +157,10 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">{{p.pregunta}}</a>
+          <a data-toggle="collapse" href="#collapse{{p.id}}">{{p.pregunta}}</a>
           </h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse">
+        <div id="collapse{{p.id}}" class="panel-collapse collapse">
           <p>{{p.respuesta|linebreaks}}</p>
         </div>
       </div>
